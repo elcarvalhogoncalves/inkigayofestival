@@ -1,4 +1,4 @@
-import styles from '@/styles/ingresso/Ingresso.module.css'
+import styles from '@/src/styles/ingresso/Ingresso.module.css'
 export default function Ingresso() {
   return (
     <div>Ingresso</div>
