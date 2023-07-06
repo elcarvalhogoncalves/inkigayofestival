@@ -1,14 +1,19 @@
 .container{
     display: flex;
-    justify-content: start;
-    align-items: end;
+    justify-content: flex-start;
+    align-items: flex-end;
     height: 100vh;
     width: 100vw;
-    animation: sequencia 78s infinite;
+    padding: 6rem 6.7rem;
+    animation: sequencia 57s infinite;
+    animation-timing-function: steps(1);
 
 }
-.footer{
-    background-color: aqua;
+.social_medias{
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    list-style: none;
 }
 
 @keyframes sequencia {
@@ -19,14 +24,14 @@
         background-position: center;
     }
 
-    33%{
+    35%{
         background: url('../../../../public/imagens/background-home/animation2.gif');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
 
-    66%{
+    68%{
         background: url('../../../../public/imagens/background-home/animation1.gif');
         background-size: cover;
         background-repeat: no-repeat;

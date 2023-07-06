@@ -1,9 +1,9 @@
-import styles from '@/styles/landing-page/Home.module.css'
+import Home from "@/components/landing-page/Home"
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <main className={styles.main}>
-      <p>Hello World!</p>
-    </main>
+    <>
+      <Home />
+    </>
   )
 }
