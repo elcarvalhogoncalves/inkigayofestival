@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    height: 100vh;
+    width: 100vw;
+    animation: sequencia 78s infinite;
+
+}
+.footer{
+    background-color: aqua;
+}
+
+@keyframes sequencia {
+    0%{
+        background: url('../../../../public/imagens/background-home/animation3.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    33%{
+        background: url('../../../../public/imagens/background-home/animation2.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    66%{
+        background: url('../../../../public/imagens/background-home/animation1.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    100%{
+        background: url('../../../../public/imagens/background-home/animation3.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+}
