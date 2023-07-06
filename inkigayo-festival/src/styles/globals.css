@@ -9,8 +9,11 @@ html {
 }
 body {
   font-size: 1.6rem;
+  color: #FFF;
+  overflow-x: hidden;
 }
 
 a:link, a:visited,  a:hover, a:active{
   text-decoration: none;
 }
+

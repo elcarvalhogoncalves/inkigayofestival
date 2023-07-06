@@ -1,7 +1,9 @@
 import '@/styles/globals.css'
 import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 
 const inter = Inter({ subsets: ['latin'] })
+const myFont = localFont({src: '../assets/PowerGrotesk-Regular.ttf'})
 
 export const metadata = {
   title: 'Inkigayo Festival ~',
@@ -15,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={myFont.className}>{children}</body>
     </html>
   )
 }
