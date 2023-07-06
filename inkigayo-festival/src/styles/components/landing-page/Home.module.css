@@ -1,19 +1,27 @@
 .container{
+    height: 100vh;
+    width: 100vw;
+    animation: sequencia 57s infinite;
+    animation-timing-function: steps(1);
+}
+
+
+.social_medias{
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    list-style: none;
+}
+
+.bottom_gradient{
+    position: absolute;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     height: 100vh;
     width: 100vw;
     padding: 6rem 6.7rem;
-    animation: sequencia 57s infinite;
-    animation-timing-function: steps(1);
-
-}
-.social_medias{
-    display: flex;
-    align-items: center;
-    gap: 2.2rem;
-    list-style: none;
+    background: linear-gradient(to bottom, transparent 50%, #000 96% , #000 100%);
 }
 
 @keyframes sequencia {
