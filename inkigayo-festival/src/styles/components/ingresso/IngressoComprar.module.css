@@ -130,6 +130,11 @@
     background: #000000;
 }
 
+.selected {
+    background-color: #3E065F;
+    color: #D9D9D9;
+  }
+
 .tableTitles {
     display: flex;
     flex-direction: row;
