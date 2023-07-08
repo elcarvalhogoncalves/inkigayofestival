@@ -11,6 +11,7 @@ body {
   font-size: 1.6rem;
   color: #FFF;
   overflow-x: hidden;
+  background:black ;
 }
 
 a:link, a:visited,  a:hover, a:active{
