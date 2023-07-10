@@ -4,9 +4,10 @@ import Link from "next/link";
 import styles from "@/styles/components/ui/Navbar.module.css";
 import { usePathname } from "next/navigation";
 import { signIn, signOut, useSession } from "next-auth/react";
+import Loading from "@/app/loading";
 
 export default function Navbar() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,7 +23,9 @@ export default function Navbar() {
       }
     });
   }
-
+  if(status === 'loading'){
+    return <Loading />
+  }
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <Link href={"http://localhost:3000/"}>
@@ -49,7 +52,7 @@ export default function Navbar() {
         </Link>
         {session && (
             <Link className={styles.link} href={"http://localhost:3000/profile"}>
-              <li className={styles.list_item}>Minha conta</li>
+              <li className={styles.list_item}>Meus Ingressos</li>
             </Link>
         )}
       </ul>
