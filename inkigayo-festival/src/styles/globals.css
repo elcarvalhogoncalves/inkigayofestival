@@ -7,10 +7,14 @@
 html {
   font-size: 62.5%; /* 1rem = 10px */
 }
+
 body {
   font-size: 1.6rem;
   color: #FFF;
+  background-color: #000;
   overflow-x: hidden;
+  
+  
 }
 
 a:link, a:visited,  a:hover, a:active{
