@@ -24,17 +24,35 @@ export default function Ingresso() {
       <section className={styles.stepWizard}>
         <ul className={styles.stepWizardList}>
           <li className={styles.stepWizardItem}>
-            <span className={styles.progressCount}>1</span>
+            <span
+              className={`${styles.progressCount}  ${
+                etapaAtual === 1 ? styles.progressCountActive : ""
+              }`}
+            >
+              1
+            </span>
             <span className={styles.progressLabel}>Comprar Ingresso(s)</span>
           </li>
 
           <li className={styles.stepWizardItem}>
-            <span className={styles.progressCount}>2</span>
+            <span
+              className={`${styles.progressCount}  ${
+                etapaAtual === 2 ? styles.progressCountActive : ""
+              }`}
+            >
+              2
+            </span>
             <span className={styles.progressLabel}>Pagamento</span>
           </li>
 
           <li className={styles.stepWizardItem}>
-            <span className={styles.progressCount}>3</span>
+            <span
+              className={`${styles.progressCount}  ${
+                etapaAtual === 3 ? styles.progressCountActive : ""
+              }`}
+            >
+              3
+            </span>
             <span className={styles.progressLabel}>Finalizar</span>
           </li>
         </ul>
@@ -46,12 +64,7 @@ export default function Ingresso() {
           handleVoltar={handleVoltar}
         />
       )}
-      {etapaAtual === 3 && (
-        <IngressoFinalizar
-          handleAvancar={handleAvancar}
-          handleVoltar={handleVoltar}
-        />
-      )}
+      {etapaAtual === 3 && <IngressoFinalizar handleVoltar={handleVoltar} />}
     </main>
   );
 }

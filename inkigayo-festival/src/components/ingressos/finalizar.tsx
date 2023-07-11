@@ -34,7 +34,7 @@ export default function IngressoFinalizar({ handleVoltar }: Props) {
           </ul>
         </table>
         <aside className={styles.buttonsContainer}>
-          <a href="#" className={styles.btnBack} onClick={handleVoltar}>
+          <button className={styles.btnBack} onClick={handleVoltar}>
             <Image
               className={styles.ImageBtn}
               src="/imagens/ingressos/btnBack.svg"
@@ -43,10 +43,8 @@ export default function IngressoFinalizar({ handleVoltar }: Props) {
               height={56}
             />
             Voltar
-          </a>
-          <a href="#" className={styles.btnNext}>
-            FINALIZAR COMPRA
-          </a>
+          </button>
+          <button className={styles.btnNext}>FINALIZAR COMPRA</button>
         </aside>
       </section>
       <section className={styles.successSection}>

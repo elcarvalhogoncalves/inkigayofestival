@@ -76,6 +76,7 @@
   background: #610094;
 
   cursor: pointer;
+  border: none;
   padding: 16px;
   font-size: 24px;
   color: #fcfcfc;
@@ -88,5 +89,8 @@
   width: 220px;
   height: 89px;
   font-size: 24px;
+  border: none;
+  background-color: black;
   color: #fcfcfc;
+  cursor: pointer;
 }

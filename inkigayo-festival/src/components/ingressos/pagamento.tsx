@@ -124,7 +124,7 @@ export default function IngressoPagamento({
       </table>
       <span className={styles.totalCart}>TOTAL: R$ 0,00</span>
       <aside className={styles.buttonsContainer}>
-        <a href="#" className={styles.btnBack} onClick={handleVoltar}>
+        <button className={styles.btnBack} onClick={handleVoltar}>
           <Image
             className={styles.ImageBtn}
             src="/imagens/ingressos/btnBack.svg"
@@ -133,10 +133,10 @@ export default function IngressoPagamento({
             height={56}
           />
           Voltar
-        </a>
-        <a href="#" className={styles.btnNext} onClick={handleAvancar}>
+        </button>
+        <button className={styles.btnNext} onClick={handleAvancar}>
           FINALIZAR COMPRA
-        </a>
+        </button>
       </aside>
     </section>
   );

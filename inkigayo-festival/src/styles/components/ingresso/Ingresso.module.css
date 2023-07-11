@@ -67,6 +67,11 @@
   color: #000000;
 }
 
+.progressCountActive {
+  background: #8e05c2;
+  color: #fcfcfc;
+}
+
 .progressLabel {
   font-weight: 400;
   font-size: 24px;
