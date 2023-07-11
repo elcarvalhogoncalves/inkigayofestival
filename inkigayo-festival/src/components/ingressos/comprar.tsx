@@ -141,25 +141,6 @@ export default function IngressoCompras() {
 
   return (
     <>
-      <section className={styles.stepWizard}>
-        <ul className={styles.stepWizardList}>
-          <li className={styles.stepWizardItem}>
-            <span className={styles.progressCount}>1</span>
-            <span className={styles.progressLabel}>Comprar Ingresso(s)</span>
-          </li>
-
-          <li className={styles.stepWizardItem}>
-            <span className={styles.progressCount}>2</span>
-            <span className={styles.progressLabel}>Pagamento</span>
-          </li>
-
-          <li className={styles.stepWizardItem}>
-            <span className={styles.progressCount}>3</span>
-            <span className={styles.progressLabel}>Finalizar</span>
-          </li>
-        </ul>
-      </section>
-
       <section className={styles.cardsDays}>
         <ul className={styles.cardsDaysList}>
           <li
@@ -202,7 +183,7 @@ export default function IngressoCompras() {
           {selectedDay === "sexta" &&
             prices.sexta.map((price, index) => (
               <>
-                <hr className={styles.line} />
+                <hr className={styles.divider} />
                 <tr className={styles.tableItensList} key={index}>
                   <td className={styles.td}>{price.ingresso}</td>
                   <td className={styles.td}>{price.valor}</td>
@@ -239,7 +220,7 @@ export default function IngressoCompras() {
           {selectedDay === "sabado" &&
             prices.sabado.map((price, index) => (
               <>
-                <hr className={styles.line} />
+                <hr className={styles.divider} />
                 <tr className={styles.tableItensList} key={index}>
                   <td className={styles.td}>{price.ingresso}</td>
                   <td className={styles.td}>{price.valor}</td>
@@ -276,7 +257,7 @@ export default function IngressoCompras() {
           {selectedDay === "domingo" &&
             prices.domingo.map((price, index) => (
               <>
-                <hr className={styles.line} />
+                <hr className={styles.divider} />
                 <tr className={styles.tableItensList} key={index}>
                   <td className={styles.td}>{price.ingresso}</td>
                   <td className={styles.td}>{price.valor}</td>
@@ -322,15 +303,14 @@ export default function IngressoCompras() {
           COMPRAR
         </a>
       </section>
-
-      <section className={styles.Imagens}>
+      <div className={styles.imagemArena}>
         <Image
           src="/imagens/ingressos/arena.png"
           alt="Mapa da Arena Fonte Nova"
           width={580}
           height={678}
         />
-      </section>
+      </div>
     </>
   );
 }
