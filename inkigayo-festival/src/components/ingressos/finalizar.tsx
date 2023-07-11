@@ -2,7 +2,15 @@
 import styles from "@/styles/components/ingresso/IngressoFinalizar.module.css";
 import Image from "next/image";
 
-export default function IngressoFinalizar() {
+interface Props {
+  handleAvancar: () => void;
+  handleVoltar: () => void;
+}
+
+export default function IngressoFinalizar({
+  handleAvancar,
+  handleVoltar,
+}: Props) {
   return (
     <>
       <section className={styles.finalSection}>
@@ -30,7 +38,7 @@ export default function IngressoFinalizar() {
           </ul>
         </table>
         <aside className={styles.buttonsContainer}>
-          <a href="#" className={styles.btnBack}>
+          <a href="#" className={styles.btnBack} onClick={handleVoltar}>
             <Image
               className={styles.ImageBtn}
               src="/imagens/ingressos/btnBack.svg"
@@ -40,7 +48,7 @@ export default function IngressoFinalizar() {
             />
             Voltar
           </a>
-          <a href="#" className={styles.btnNext}>
+          <a href="#" className={styles.btnNext} onClick={handleAvancar}>
             FINALIZAR COMPRA
           </a>
         </aside>

@@ -10,7 +10,11 @@ interface IDays {
   }[];
 }
 
-export default function IngressoCompras() {
+interface Props {
+  handleAvancar: () => void;
+}
+
+export default function IngressoCompras({ handleAvancar }: Props) {
   const [selectedDay, setSelectedDay] = useState<string>("sexta");
 
   const prices: IDays = {
@@ -299,7 +303,7 @@ export default function IngressoCompras() {
             maximumFractionDigits: 2,
           })}
         </span>
-        <a href="#" className={styles.btnNext}>
+        <a href="#" className={styles.btnNext} onClick={handleAvancar}>
           COMPRAR
         </a>
       </section>

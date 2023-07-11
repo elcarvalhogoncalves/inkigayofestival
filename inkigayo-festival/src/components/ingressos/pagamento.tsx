@@ -2,7 +2,15 @@
 import styles from "@/styles/components/ingresso/IngressoPagamento.module.css";
 import Image from "next/image";
 
-export default function IngressoPagamento() {
+interface Props {
+  handleAvancar: () => void;
+  handleVoltar: () => void;
+}
+
+export default function IngressoPagamento({
+  handleAvancar,
+  handleVoltar,
+}: Props) {
   return (
     <section className={styles.paymentSection}>
       <table className={styles.paymentTable}>
@@ -116,7 +124,7 @@ export default function IngressoPagamento() {
       </table>
       <span className={styles.totalCart}>TOTAL: R$ 0,00</span>
       <aside className={styles.buttonsContainer}>
-        <a href="#" className={styles.btnBack}>
+        <a href="#" className={styles.btnBack} onClick={handleVoltar}>
           <Image
             className={styles.ImageBtn}
             src="/imagens/ingressos/btnBack.svg"
@@ -126,7 +134,7 @@ export default function IngressoPagamento() {
           />
           Voltar
         </a>
-        <a href="#" className={styles.btnNext}>
+        <a href="#" className={styles.btnNext} onClick={handleAvancar}>
           FINALIZAR COMPRA
         </a>
       </aside>
