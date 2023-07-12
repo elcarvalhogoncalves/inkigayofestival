@@ -23,7 +23,7 @@ export default function Festival() {
         “Lorem ipsum dolor sit amet consectetur. Diam semper est diam nunc
         egestas dui tincidunt sit.”
         </p>
-        <p className={styles.autor}> Fulano, Ciclano</p>
+        <p className={styles.autor}> FULANO, CICLANO</p>
         </div>
       </div>
       
