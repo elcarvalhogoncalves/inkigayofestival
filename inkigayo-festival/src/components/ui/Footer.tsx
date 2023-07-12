@@ -6,23 +6,26 @@ import {
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import styles from "@/styles/components/landing-page/Home.module.css";
+import styles from "@/styles/components/ui/Footer.module.css";
 export default function Footer() {
   return (
     <>
-      <h1> ASSINE NOSSA NEWSLETTER</h1>
-      <h2> Receba nossas novidades em primeira mão</h2>
-      <div className={styles.input}>
-         <input
-        type="text"
-        id="email"
-        name="email"
-        placeholder="Digite o seu Email"
-      />
-      <button className={styles.botao}>Enviar</button>
+      <div className={styles.up}>
+        <h1> ASSINE NOSSA NEWSLETTER</h1>
+        <h2> Receba nossas novidades em primeira mão</h2>{" "}
       </div>
-     
-      <div className={styles.bottom}>
+
+      <div className={styles.input}>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Digite o seu Email"
+        />
+        <button className={styles.botao}>Enviar</button>
+      </div>
+
+      <footer className={styles.bottom}>
         <div className={styles.iconLine}>
           <li>
             <Link href="https://twitter.com/inkigayofestival/" target="_blank">
@@ -67,14 +70,20 @@ export default function Footer() {
           </li>
         </div>
         <div className={styles.infos}>
-          <p>Política de Privacidade</p>
-          <p> Patrocinadores</p>
-          <p> Produtos Oficiais </p>
-          <p> Termos e Condições</p>
-          <p> Trabalhe conosco </p>
-          <p> Ajuda </p>
+          <div className={styles.info1}>
+            <p>Política de Privacidade</p>
+            <p> Termos e Condições</p>
+          </div>
+          <div className={styles.info2}>
+            <p> Patrocinadores</p>
+            <p> Ajuda </p>
+          </div>
+          <div className={styles.info3}>
+            <p> Produtos Oficiais </p>
+            <p> Trabalhe conosco </p>
+          </div>
         </div>
-      </div>
+      </footer>
     </>
   );
 }
