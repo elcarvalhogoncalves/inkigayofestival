@@ -7,6 +7,12 @@ interface Props {
   handleVoltar: () => void;
 }
 
+type LoginFestival = {
+  id: number;
+  name: string;
+  userId: number;
+};
+
 export default function IngressoPagamento({
   handleAvancar,
   handleVoltar,
