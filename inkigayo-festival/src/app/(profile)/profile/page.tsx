@@ -7,15 +7,15 @@ import Navbar from "@/components/ui/Navbar"
 import Profile from "@/components/profile/Profile"
 
 export default function MyProfile() {
-  const { data: session, status } = useSession({
-    required: true,
-    onUnauthenticated() {
-      redirect('../');
-    },
-  })
+  const { data: session, status } = useSession()
+
 
   if (status === "loading") {
     return <Loading/>
+  }
+
+  if(status === "unauthenticated"){
+    redirect('../')
   }
 
   return (

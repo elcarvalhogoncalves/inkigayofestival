@@ -36,8 +36,9 @@
 }
 
 .logo{
-    background: url('../../../../public/imagens/logo.svg') no-repeat;
+    background: url('../../../../public/imagens/logoW.svg') no-repeat;
     background-size: contain;
+    background-position: center;
     cursor: pointer;
     width: 11.5rem;
     height: 11rem;
@@ -60,4 +61,107 @@
 
 .link{
     color: white;
+}
+
+.icon{
+    display: none;
+}
+
+.display_none{
+    display: none;
+}
+
+
+@media screen and (max-width: 940px) {
+    .header{
+        display: flex;
+        height: 18.1rem;
+        width: 100%;
+        align-items: center;
+        gap: 11.3rem; 
+    }
+
+    .icon{
+        display: flex;
+        color: #3E065F;
+        align-self: flex-start;
+        height: 5rem;
+        width: 7.5rem;
+        font-weight: lighter;
+        cursor: pointer;
+    }
+
+    .iconX{
+        display: none; 
+        /* DISPLAY NONE */
+    }
+
+    .iconX_open{
+        display: flex;
+    }
+    .iconB{
+        display: flex;
+        /* DISPLAY NONE */
+    }
+    .iconB_open{
+        display: none;
+    
+    }
+
+    .logo{
+        background: url('../../../../public/imagens/logoW.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 18.8rem;
+        height: 18.1rem;
+    }
+
+    .logo_open{
+        background: url('../../../../public/imagens/logoB.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+
+    .navbar{
+        flex-direction: column;
+        justify-content: start;
+        padding-inline: 2.7rem; 
+        padding-block: 3rem;
+        gap: 8rem;
+        height: 100%;
+    }
+    .navbar_open{
+        background-color: #FFF;
+    }
+
+    .menu{
+        flex-direction: column;
+        gap: 5rem;     
+        display: none;   
+    }
+    .menu_open{
+        display: flex;
+    }
+
+    .list_item{
+        font-size: 32px;
+        color: #3E065F;
+    }
+    .login_button{
+        border: .3rem solid #3E065F;
+        color: #3E065F;
+        display: none;
+    }
+
+    .login_button_open{
+        display:inline
+    }
+    
+    
+    .login_button:hover{
+        background-color: #3E065F;
+        color: #fff;
+    }
+    
 }

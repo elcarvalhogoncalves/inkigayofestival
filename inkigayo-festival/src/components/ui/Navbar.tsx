@@ -3,13 +3,20 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/components/ui/Navbar.module.css";
 import { usePathname } from "next/navigation";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Loading from "@/app/loading";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar() {
   const { data: session, status } = useSession();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  }
 
   // Condicional que vai fixar ou não o menu
   if (typeof window !== "undefined") {
@@ -27,11 +34,26 @@ export default function Navbar() {
     return <Loading />
   }
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <Link href={"http://localhost:3000/"}>
-        <figure className={styles.logo} />
-      </Link>
-      <ul className={styles.menu}>
+    <nav className={`${styles.navbar} ${showMenu ? "" :styles.navbar_open} ${scrolled ? styles.scrolled : ""}`}>
+      <header className={styles.header}>
+        
+        <Link href={"http://localhost:3000/"}>
+          <figure className={`${styles.logo} ${showMenu ? "" :styles.logo_open}`} />
+        </Link>
+
+        <span onClick={toggleMenu} className={styles.icon}>
+          <i className={`${styles.iconB} ${showMenu ? "" :styles.iconB_open}`}>
+            <FontAwesomeIcon icon={faBars} style={{color: '#FFF', height: '7.5rem', width: '7.5rem'}} />
+          </i>
+          
+          <i  className={`${styles.iconX} ${showMenu ? "" :styles.iconX_open}`}>
+            <FontAwesomeIcon icon={faXmark} style={{height: '7.5rem', width: '7.5rem'}} />
+          </i>
+
+        </span>
+
+      </header>
+      <ul className={`${styles.menu} ${showMenu ? "" :styles.menu_open}`}>
         <Link
           className={styles.link}
           href={"http://localhost:3000/#o_festival"}
@@ -57,7 +79,7 @@ export default function Navbar() {
         )}
       </ul>
       {session ? (
-          <button onClick={() => signOut()} className={styles.login_button}>Logout</button>
+          <button onClick={() => signOut()} className={`${styles.login_button} ${showMenu ? "" :styles.login_button_open}`}>Logout</button>
       ) : (
         <Link
           className={styles.link}
@@ -67,7 +89,7 @@ export default function Navbar() {
               : `http://localhost:3000/login`
           }
         >
-          <button className={styles.login_button}>Login</button>
+          <button className={`${styles.login_button} ${showMenu ? "" :styles.login_button_open}`}>Login</button>
         </Link>
       )}
     </nav>

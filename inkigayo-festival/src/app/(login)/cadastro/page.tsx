@@ -117,7 +117,8 @@ export default function Cadastro() {
 							{registerError}
 						</span>
 					}
-					<label>
+					<label htmlFor="email">
+					
 						<input
 							onChange={(e) => setName(e.target.value)}
 							className={`${styles.input} ${nameError && styles.error}`}
@@ -126,6 +127,7 @@ export default function Cadastro() {
 							name="name"
 							autoComplete="off"
 						/>
+						
 					</label>
 					{emailError &&
 						<span className={styles.error_span}>
