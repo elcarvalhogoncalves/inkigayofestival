@@ -1,0 +1,96 @@
+.paymentSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  text-align: center;
+  flex-direction: column;
+}
+
+.paymentTableTitle {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 32px 0px;
+  font-size: 3.2rem;
+}
+
+.divider {
+  width: 100rem;
+}
+
+.methodChoiceSection {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.li {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  padding: 0px 3.2rem 3.2rem 30rem;
+  font-size: 2.4rem;
+}
+
+.checkbox {
+  display: flex;
+  margin: 3.2rem 3.2rem 0px 3.2rem;
+  cursor: pointer;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.paymentMethod {
+  cursor: pointer;
+  margin: 32px 32px 0px 32px;
+}
+
+.Image {
+  margin: 32px 0px 0px 0px;
+}
+
+.totalCart {
+  font-size: 32px;
+  font-weight: 400;
+  padding-top: 4rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+  padding: 10px;
+}
+
+.btnNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+
+  width: 220px;
+  height: 89px;
+  background: #610094;
+
+  cursor: pointer;
+  border: none;
+  padding: 16px;
+  font-size: 24px;
+  color: #fcfcfc;
+}
+
+.btnBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 89px;
+  font-size: 24px;
+  border: none;
+  background-color: black;
+  color: #fcfcfc;
+  cursor: pointer;
+}

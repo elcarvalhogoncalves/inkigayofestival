@@ -1,0 +1,106 @@
+.finalSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+.tableTitle,
+.pageTitle {
+  font-size: 32px;
+  align-items: center;
+}
+
+.informationTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  border: #fcfcfc solid 1px;
+  border-radius: 15px;
+  width: 918px;
+  height: 374px;
+}
+
+.informationList {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 30px 0 0 0;
+}
+
+.informationListItem {
+  font-size: 24px;
+  list-style: none;
+  padding: 10px;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+  padding: 10px;
+}
+
+.btnNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+
+  width: 220px;
+  height: 89px;
+  background: #610094;
+
+  cursor: pointer;
+  padding: 16px;
+  font-size: 24px;
+  color: #fcfcfc;
+  border: none;
+}
+
+.btnBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 89px;
+  font-size: 24px;
+  color: #fcfcfc;
+  background-color: black;
+  cursor: pointer;
+  border: none;
+}
+
+.successSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4rem;
+}
+
+.pdfBox {
+  display: flex;
+  flex-direction: row;
+  width: 686px;
+  height: 67px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px;
+  border: #fcfcfc solid 1px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.successTitle {
+  font-size: 42px;
+  color: #8e05c2;
+}
+
+.successText {
+  font-size: 32px;
+}

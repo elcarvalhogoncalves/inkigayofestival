@@ -1,12 +1,16 @@
-import Link from 'next/link';
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faSpotify, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import styles from '@/styles/components/landing-page/Home.module.css'
+import {
+  faTwitter,
+  faSpotify,
+  faYoutube,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import styles from "@/styles/components/landing-page/Home.module.css";
 
 export default function Home() {
   return (
-    <>  
-      
+    <>
       <section className={styles.container}>
         <div className={styles.bottom_gradient}>
           <ul className={styles.social_medias}>
@@ -18,5 +22,5 @@ export default function Home() {
         </div>
       </section>
     </>
-  )
+  );
 }

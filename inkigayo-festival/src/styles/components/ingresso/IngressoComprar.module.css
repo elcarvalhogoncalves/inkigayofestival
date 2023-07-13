@@ -1,0 +1,204 @@
+@media only screen and (max-width: 670px) {
+  .tableTitles {
+    padding: 0px 30px 0px 30px !important;
+  }
+  .cardsDaysList {
+    gap: 3rem !important;
+  }
+
+  .cardsDaysItem {
+    width: 140px !important;
+    height: 70px !important;
+  }
+
+  .divider {
+    width: 600px !important;
+  }
+
+  .titleTable {
+    font-size: 16px !important;
+  }
+
+  .daystitle {
+    font-size: 14px !important;
+  }
+
+  .datetitle {
+    font-size: 14px !important;
+  }
+
+  .td {
+    width: 150px !important;
+    font-size: 14px !important;
+    padding: 0px 0px 0px 30px !important;
+  }
+}
+
+.cardsDays {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  padding-top: 3.88rem;
+}
+
+.cardsDaysList {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 11rem;
+}
+
+.cardsDaysItem {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 210px;
+  height: 99px;
+  flex-shrink: 0;
+  background: #d9d9d9;
+  color: #000000;
+}
+
+.tableInfomationIngresso {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  width: 1000px;
+}
+
+.daystitle {
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.datetitle {
+  text-align: center;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sectionIngresso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7.31rem;
+  height: 100vh;
+  background: #000000;
+}
+
+.selected {
+  background-color: #3e065f;
+  color: #d9d9d9;
+}
+
+.tableTitles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: center;
+  padding: 24px;
+}
+
+.tableItensList {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  padding: 24px;
+}
+
+.titleTable {
+  width: 200px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.4px;
+}
+
+.td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.buttonAddSubtract {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: center;
+}
+
+.workTime {
+  margin: 0 32px 0 32px;
+  display: relative;
+  margin-top: 15px;
+  font-size: 24px;
+  width: 2rem;
+}
+
+.btnMinus,
+.btnPlus {
+  display: relative;
+  margin-top: 13px;
+
+  width: 41px;
+  height: 41px;
+
+  cursor: pointer;
+
+  background-color: black;
+  color: #610094;
+  border-radius: 50%;
+  border: #610094 3px solid;
+
+  font-size: 32px;
+  text-align: center;
+}
+
+.totalCart {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.4px;
+  padding-top: 4rem;
+}
+
+.btnNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  margin-top: 4rem;
+
+  width: 220px;
+  height: 89px;
+  background: #610094;
+
+  cursor: pointer;
+  padding: 16px;
+  font-size: 24px;
+  color: #fcfcfc;
+  border: none;
+}
+
+.imagemArena {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6rem;
+}
