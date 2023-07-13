@@ -12,7 +12,7 @@ export default function Navbar() {
   const { data: session, status } = useSession();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -34,26 +34,26 @@ export default function Navbar() {
     return <Loading />
   }
   return (
-    <nav className={`${styles.navbar} ${showMenu ? "" :styles.navbar_open} ${scrolled ? styles.scrolled : ""}`}>
+    <nav className={`${styles.navbar} ${showMenu ? styles.navbar_open :""} ${scrolled ? styles.scrolled : ""}`}>
       <header className={styles.header}>
         
         <Link href={"http://localhost:3000/"}>
-          <figure className={`${styles.logo} ${showMenu ? "" :styles.logo_open}`} />
+          <figure className={`${styles.logo} ${showMenu ? styles.logo_open :""}`} />
         </Link>
 
         <span onClick={toggleMenu} className={styles.icon}>
-          <i className={`${styles.iconB} ${showMenu ? "" :styles.iconB_open}`}>
+          <i className={`${styles.iconB} ${showMenu ? styles.iconB_open :""}`}>
             <FontAwesomeIcon icon={faBars} style={{color: '#FFF', height: '7.5rem', width: '7.5rem'}} />
           </i>
           
-          <i  className={`${styles.iconX} ${showMenu ? "" :styles.iconX_open}`}>
+          <i  className={`${styles.iconX} ${showMenu ? styles.iconX_open : ""}`}>
             <FontAwesomeIcon icon={faXmark} style={{height: '7.5rem', width: '7.5rem'}} />
           </i>
 
         </span>
 
       </header>
-      <ul className={`${styles.menu} ${showMenu ? "" :styles.menu_open}`}>
+      <ul className={`${styles.menu} ${showMenu ? styles.menu_open :""}`}>
         <Link
           className={styles.link}
           href={"http://localhost:3000/#o_festival"}
@@ -79,7 +79,7 @@ export default function Navbar() {
         )}
       </ul>
       {session ? (
-          <button onClick={() => signOut()} className={`${styles.login_button} ${showMenu ? "" :styles.login_button_open}`}>Logout</button>
+          <button onClick={() => signOut()} className={`${styles.login_button} ${showMenu ? styles.login_button_open :""}`}>Logout</button>
       ) : (
         <Link
           className={styles.link}
@@ -89,7 +89,7 @@ export default function Navbar() {
               : `http://localhost:3000/login`
           }
         >
-          <button className={`${styles.login_button} ${showMenu ? "" :styles.login_button_open}`}>Login</button>
+          <button className={`${styles.login_button} ${showMenu ? styles.login_button_open :""}`}>Login</button>
         </Link>
       )}
     </nav>

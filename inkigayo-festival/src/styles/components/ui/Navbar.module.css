@@ -72,11 +72,13 @@
 }
 
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1020px) {
     .header{
         display: flex;
         height: 18.1rem;
         width: 100%;
+        min-width: 30rem;
+        justify-content: space-between;
         align-items: center;
         gap: 11.3rem; 
     }
