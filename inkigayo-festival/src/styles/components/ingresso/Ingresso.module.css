@@ -1,4 +1,10 @@
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .progressCount {
     height: 50px;
     width: 50px;

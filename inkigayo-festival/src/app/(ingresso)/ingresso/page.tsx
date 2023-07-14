@@ -21,7 +21,6 @@ export default function Ingresso() {
 
   return (
     <main className={styles.main}>
-      <Navbar />
       <section className={styles.stepWizard}>
         <ul className={styles.stepWizardList}>
           <li className={styles.stepWizardItem}>
