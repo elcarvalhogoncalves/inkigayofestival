@@ -1,6 +1,6 @@
 'use client'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import styles from "@/styles/components/login/Cadastro.module.css";
 import Link from "next/link";
 import { redirect } from 'next/navigation'
@@ -158,7 +158,15 @@ export default function Cadastro() {
 							name="password"
 						/>
 						<span onClick={() => setShowPassword(!showPassword)} className={styles.eye}>
-							<FontAwesomeIcon icon={faEye} style={{height: '3.4rem', width: '3.4rem'}}/>
+							{!showPassword === true ?
+								<>
+									<FontAwesomeIcon icon={faEyeSlash} style={{height: '3.4rem', width: '3.4rem'}}/>
+								</>
+								:
+								<>
+									<FontAwesomeIcon icon={faEye} style={{height: '3.4rem', width: '3.4rem'}}/>								
+								</>
+							}
 						</span>
 					</label>
 					<label className={styles.cpassword}>
@@ -170,7 +178,15 @@ export default function Cadastro() {
 							name="password"
 						/>
 						<span onClick={() => setShowConfirmPassword(!showConfirmPassword)} className={styles.eye}>
-							<FontAwesomeIcon icon={faEye} style={{height: '3.4rem', width: '3.4rem'}}/>
+							{!showConfirmPassword === true ?
+								<>
+									<FontAwesomeIcon icon={faEyeSlash} style={{height: '3.4rem', width: '3.4rem'}}/>
+								</>
+								:
+								<>
+									<FontAwesomeIcon icon={faEye} style={{height: '3.4rem', width: '3.4rem'}}/>								
+								</>
+							}
 						</span>
 					</label>
 				</fieldset>

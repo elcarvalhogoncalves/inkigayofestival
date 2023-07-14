@@ -6,7 +6,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import Loading from "@/app/loading"
  
-interface Iuser{
+type Iuser = {
   name: string,
   email: string
 }
