@@ -4,9 +4,13 @@ import Image from "next/image";
 
 interface Props {
   handleVoltar: () => void;
+  handleAvancar: () => void;
 }
 
-export default function IngressoFinalizar({ handleVoltar }: Props) {
+export default function IngressoFinalizar({
+  handleAvancar,
+  handleVoltar,
+}: Props) {
   return (
     <>
       <section className={styles.finalSection}>
@@ -44,23 +48,10 @@ export default function IngressoFinalizar({ handleVoltar }: Props) {
             />
             Voltar
           </button>
-          <button className={styles.btnNext}>FINALIZAR COMPRA</button>
+          <button className={styles.btnNext} onClick={handleAvancar}>
+            FINALIZAR COMPRA
+          </button>
         </aside>
-      </section>
-      <section className={styles.successSection}>
-        <span className={styles.successTitle}>
-          COMPRA FINALIZADA COM SUCESSO!
-        </span>
-        <div className={styles.pdfBox}>
-          <p className={styles.successText}>Baixe seus ingressos</p>
-          <Image
-            className={styles.imagemPdfLogo}
-            src="/imagens/ingressos/pdfLogo.svg"
-            alt="Imagem ilustrativa do PDF"
-            width={40}
-            height={40}
-          />
-        </div>
       </section>
     </>
   );

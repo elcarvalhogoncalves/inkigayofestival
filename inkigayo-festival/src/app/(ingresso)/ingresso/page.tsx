@@ -6,6 +6,7 @@ import Navbar from "@/components/ui/Navbar";
 import IngressoCompras from "@/components/ingressos/comprar";
 import IngressoPagamento from "@/components/ingressos/pagamento";
 import IngressoFinalizar from "@/components/ingressos/finalizar";
+import Sucesso from "@/components/ingressos/success";
 
 export default function Ingresso() {
   const [etapaAtual, setEtapaAtual] = useState(1);
@@ -64,7 +65,13 @@ export default function Ingresso() {
           handleVoltar={handleVoltar}
         />
       )}
-      {etapaAtual === 3 && <IngressoFinalizar handleVoltar={handleVoltar} />}
+      {etapaAtual === 3 && (
+        <IngressoFinalizar
+          handleAvancar={handleAvancar}
+          handleVoltar={handleVoltar}
+        />
+      )}
+      {etapaAtual === 4 && <Sucesso />}
     </main>
   );
 }

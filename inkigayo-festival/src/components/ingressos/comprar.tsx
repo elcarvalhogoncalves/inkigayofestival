@@ -178,20 +178,20 @@ export default function IngressoCompras({ handleAvancar }: Props) {
       </section>
 
       <section className={styles.sectionIngresso}>
-        <table className={styles.tableInfomationIngresso}>
-          <tr className={styles.tableTitles}>
-            <td className={styles.titleTable}>INGRESSO</td>
-            <td className={styles.titleTable}>VALOR</td>
-            <td className={styles.titleTable}>QUANTIDADE</td>
-          </tr>
+        <div className={styles.tableInfomationIngresso}>
+          <ul className={styles.tableTitles}>
+            <li className={styles.titleTable}>INGRESSO</li>
+            <li className={styles.titleTable}>VALOR</li>
+            <li className={styles.titleTable}>QUANTIDADE</li>
+          </ul>
           {selectedDay === "sexta" &&
             prices.sexta.map((price, index) => (
               <>
                 <hr className={styles.divider} />
-                <tr className={styles.tableItensList} key={index}>
-                  <td className={styles.td}>{price.ingresso}</td>
-                  <td className={styles.td}>{price.valor}</td>
-                  <td className={styles.buttonAddSubtract}>
+                <ul className={styles.tableItensList} key={index}>
+                  <li className={styles.td}>{price.ingresso}</li>
+                  <li className={styles.td}>{price.valor}</li>
+                  <li className={styles.buttonAddSubtract}>
                     <div className={styles.buttonAddSubtract}>
                       <button
                         className={styles.btnMinus}
@@ -216,8 +216,8 @@ export default function IngressoCompras({ handleAvancar }: Props) {
                         +
                       </button>
                     </div>
-                  </td>
-                </tr>
+                  </li>
+                </ul>
               </>
             ))}
 
@@ -225,10 +225,10 @@ export default function IngressoCompras({ handleAvancar }: Props) {
             prices.sabado.map((price, index) => (
               <>
                 <hr className={styles.divider} />
-                <tr className={styles.tableItensList} key={index}>
-                  <td className={styles.td}>{price.ingresso}</td>
-                  <td className={styles.td}>{price.valor}</td>
-                  <td className={styles.buttonAddSubtract}>
+                <ul className={styles.tableItensList} key={index}>
+                  <li className={styles.td}>{price.ingresso}</li>
+                  <li className={styles.td}>{price.valor}</li>
+                  <li className={styles.buttonAddSubtract}>
                     <div className={styles.buttonAddSubtract}>
                       <button
                         className={styles.btnMinus}
@@ -253,8 +253,8 @@ export default function IngressoCompras({ handleAvancar }: Props) {
                         +
                       </button>
                     </div>
-                  </td>
-                </tr>{" "}
+                  </li>
+                </ul>{" "}
               </>
             ))}
 
@@ -262,10 +262,10 @@ export default function IngressoCompras({ handleAvancar }: Props) {
             prices.domingo.map((price, index) => (
               <>
                 <hr className={styles.divider} />
-                <tr className={styles.tableItensList} key={index}>
-                  <td className={styles.td}>{price.ingresso}</td>
-                  <td className={styles.td}>{price.valor}</td>
-                  <td className={styles.buttonAddSubtract}>
+                <ul className={styles.tableItensList} key={index}>
+                  <li className={styles.td}>{price.ingresso}</li>
+                  <li className={styles.td}>{price.valor}</li>
+                  <li className={styles.buttonAddSubtract}>
                     <div className={styles.buttonAddSubtract}>
                       <button
                         className={styles.btnMinus}
@@ -290,11 +290,11 @@ export default function IngressoCompras({ handleAvancar }: Props) {
                         +
                       </button>
                     </div>
-                  </td>
-                </tr>{" "}
+                  </li>
+                </ul>{" "}
               </>
             ))}
-        </table>
+        </div>
 
         <span className={styles.totalCart}>
           TOTAL: R${" "}
@@ -303,9 +303,9 @@ export default function IngressoCompras({ handleAvancar }: Props) {
             maximumFractionDigits: 2,
           })}
         </span>
-        <a href="#" className={styles.btnNext} onClick={handleAvancar}>
+        <button className={styles.btnNext} onClick={handleAvancar}>
           COMPRAR
-        </a>
+        </button>
       </section>
       <div className={styles.imagemArena}>
         <Image

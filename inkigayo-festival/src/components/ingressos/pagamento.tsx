@@ -19,13 +19,13 @@ export default function IngressoPagamento({
 }: Props) {
   return (
     <section className={styles.paymentSection}>
-      <table className={styles.paymentTable}>
-        <tr className={styles.titleSection}>
+      <div className={styles.paymentTable}>
+        <ul className={styles.titleSection}>
           <label className={styles.paymentTableTitle}>
             FORMAS DE PAGAMENTO
           </label>
-        </tr>
-        <tr className={styles.methodChoiceSection}>
+        </ul>
+        <ul className={styles.methodChoiceSection}>
           <hr className={styles.divider} />
           <li className={styles.li}>
             <input
@@ -126,8 +126,8 @@ export default function IngressoPagamento({
               Pix
             </label>
           </li>
-        </tr>
-      </table>
+        </ul>
+      </div>
       <span className={styles.totalCart}>TOTAL: R$ 0,00</span>
       <aside className={styles.buttonsContainer}>
         <button className={styles.btnBack} onClick={handleVoltar}>
