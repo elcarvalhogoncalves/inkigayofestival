@@ -1,5 +1,5 @@
 import styles from "@/styles/components/landing-page/Festival.module.css";
-import foto from "@/../public/imagens/festival.svg"
+import foto from "../../../public/imagens/festival.png"
 import Image from "next/image";
 
 export default function Festival() {
@@ -28,7 +28,7 @@ export default function Festival() {
       </div>
       
       <figure className={styles.image}>
-        <Image src={foto} width={630} height={832} />
+        <Image src={foto} width={630} height={832} alt={""} />
       </figure>
     </div>
     </>
