@@ -35,11 +35,15 @@
 }
 
 .checkbox {
-  display: flex;
   margin: 3.2rem 3.2rem 0rem 3.2rem;
   cursor: pointer;
   width: 3.5rem;
   height: 3.5rem;
+}
+
+.checkbox::before {
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
 .paymentMethod {
