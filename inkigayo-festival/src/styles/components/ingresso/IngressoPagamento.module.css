@@ -73,7 +73,7 @@
 
   width: 220px;
   height: 89px;
-  background: #610094;
+  background: rgba(62, 6, 95, 1);
 
   cursor: pointer;
   border: none;
@@ -93,4 +93,43 @@
   background-color: black;
   color: #fcfcfc;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .checkbox {
+    margin: 0rem 3.2rem 0rem 3.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .Image {
+    margin: 0rem 0px 0px 0px;
+  }
+
+  .li {
+    padding: 0;
+  }
+
+  .paymentTableTitle {
+    font-size: 1.8rem;
+  }
+
+  .paymentMethod {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    cursor: pointer;
+    margin: 1rem 3.2rem 1rem 3.2rem;
+    height: 5.8rem;
+    width: 18.2rem;
+    font-size: 1.8rem;
+  }
+
+  .divider {
+    width: 38rem;
+  }
+
+  .totalCart {
+    font-size: 1.8rem;
+  }
 }

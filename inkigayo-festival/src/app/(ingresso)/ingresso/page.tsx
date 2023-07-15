@@ -59,7 +59,8 @@ export default function Ingresso() {
               className={`${styles.progressCount}  ${
                 etapaAtual === 1 ? styles.progressCountActive : ""
               }
-              ${etapaAtual === 4 && styles.progressCountActive}`}
+              ${etapaAtual === 2 && styles.progressCountActive}
+              ${etapaAtual === 4 && styles.progressCountActiveSucesso}`}
             >
               1
             </span>
@@ -71,7 +72,7 @@ export default function Ingresso() {
               className={`${styles.progressCount}  ${
                 etapaAtual === 2 ? styles.progressCountActive : ""
               }
-              ${etapaAtual === 4 && styles.progressCountActive}
+              ${etapaAtual === 4 && styles.progressCountActiveSucesso}
               `}
             >
               2
@@ -84,7 +85,7 @@ export default function Ingresso() {
               className={`${styles.progressCount}  ${
                 etapaAtual === 3 ? styles.progressCountActive : ""
               }
-              ${etapaAtual === 4 && styles.progressCountActive}
+              ${etapaAtual === 4 && styles.progressCountActiveSucesso}
               `}
             >
               3
