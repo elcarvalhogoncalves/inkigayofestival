@@ -79,37 +79,10 @@
   border: none;
 }
 
-.successSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 4rem;
-}
-
-.pdfBox {
-  display: flex;
-  flex-direction: row;
-  width: 686px;
-  height: 67px;
-  justify-content: space-between;
-  align-items: center;
-  margin: 100px;
-  border: #fcfcfc solid 1px;
-  padding: 30px;
-  cursor: pointer;
-}
-
-.successTitle {
-  font-size: 42px;
-  color: #8e05c2;
-}
-
-.successText {
-  font-size: 32px;
-}
-
 @media screen and (max-width: 600px) {
+  .finalSection {
+    margin-top: 2rem;
+  }
   .pageTitle {
     font-size: 1.8rem;
   }
@@ -127,5 +100,17 @@
 
   .informationListItem {
     font-size: 1.4rem;
+  }
+
+  .buttonsContainer {
+    margin-top: 1.5rem;
+  }
+
+  .btnNext,
+  .btnBack {
+    margin-top: 0rem;
+    width: 13rem;
+    height: 5.8rem;
+    font-size: 1.8rem;
   }
 }
