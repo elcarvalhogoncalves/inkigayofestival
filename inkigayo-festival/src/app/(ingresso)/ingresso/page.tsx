@@ -107,6 +107,7 @@ export default function Ingresso() {
         <IngressoFinalizar
           handleAvancar={handleAvancar}
           handleVoltar={handleVoltar}
+          handleCart={carrinho}
         />
       )}
       {etapaAtual === 4 && <Sucesso />}

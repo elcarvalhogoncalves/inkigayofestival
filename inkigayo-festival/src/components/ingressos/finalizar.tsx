@@ -5,12 +5,22 @@ import Image from "next/image";
 interface Props {
   handleVoltar: () => void;
   handleAvancar: () => void;
+  handleCart: Cart;
+}
+interface Cart {
+  name: string;
+  total: number;
+  quantity: number;
+  metodoPagamento: string;
+  tiposIngresso: string;
 }
 
 export default function IngressoFinalizar({
   handleAvancar,
   handleVoltar,
+  handleCart,
 }: Props) {
+  const infoCart = handleCart;
   return (
     <>
       <section className={styles.finalSection}>
@@ -21,19 +31,20 @@ export default function IngressoFinalizar({
         <table className={styles.informationTable}>
           <label className={styles.tableTitle}>INFORMAÇÕES DO PEDIDO</label>
           <ul className={styles.informationList}>
-            <li className={styles.informationListItem}>Nome: Fulano de Tal</li>
             <li className={styles.informationListItem}>
-              Tipo(s) de Ingresso(s): Arena Pista Inteira, Arena Pista
-              Meia-Entrada
+              Nome: {infoCart.name}
             </li>
             <li className={styles.informationListItem}>
-              Quantidade de ingressos: 2
+              Tipo(s) de Ingresso(s): {infoCart.tiposIngresso}
             </li>
             <li className={styles.informationListItem}>
-              Valor total: R$ 687,00
+              Quantidade de ingressos: {infoCart.quantity}
             </li>
             <li className={styles.informationListItem}>
-              Método de pagamento: Cartão de Débito
+              Valor total: R$ {infoCart.total}
+            </li>
+            <li className={styles.informationListItem}>
+              Método de pagamento: {infoCart.metodoPagamento}
             </li>
           </ul>
         </table>
