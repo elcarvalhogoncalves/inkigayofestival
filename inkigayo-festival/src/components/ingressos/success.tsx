@@ -19,6 +19,7 @@ export default function Sucesso() {
             height={40}
           />
         </div>
+        <button className={styles.btnFinish}>VER MEUS INGRESSOS</button>
       </section>
     </main>
   );

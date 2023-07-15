@@ -36,3 +36,21 @@
 .successText {
   font-size: 32px;
 }
+
+.btnFinish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  margin-top: 6rem;
+
+  width: 220px;
+  height: 89px;
+  background: #610094;
+
+  cursor: pointer;
+  border: none;
+  padding: 16px;
+  font-size: 24px;
+  color: #fcfcfc;
+}
