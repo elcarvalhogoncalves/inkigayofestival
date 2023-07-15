@@ -108,3 +108,24 @@
 .successText {
   font-size: 32px;
 }
+
+@media screen and (max-width: 600px) {
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+
+  .informationTable {
+    width: 90%;
+    margin: 2rem;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+  }
+
+  .tableTitle {
+    font-size: 1.8rem;
+  }
+
+  .informationListItem {
+    font-size: 1.4rem;
+  }
+}
