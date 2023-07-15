@@ -465,12 +465,11 @@ export default function IngressoCompras({
           COMPRAR
         </button>
       </section>
-      <div className={styles.imagemArena}>
-        <Image
+      <div className={styles.imagem}>
+        <img
+          className={styles.imagemArena}
           src="/imagens/ingressos/arena.png"
           alt="Mapa da Arena Fonte Nova"
-          width={580}
-          height={678}
         />
       </div>
     </>
