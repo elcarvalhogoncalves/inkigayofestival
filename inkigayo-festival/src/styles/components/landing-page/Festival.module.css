@@ -3,9 +3,37 @@
 }
 
 .body {
+  max-width: 128rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  display: relative;
+  height: 24.9rem;
+  width: 100%;
+  background-image: url(../../../../public/imagens/títulos_coreanos/O\ festival.svg);
+  background-repeat:no-repeat;
+  background-position-x: 27rem ;
+  background-position-y: 5rem ;
+  
+
+}
+.title h1{
+  font-size: 6.4rem ;
+  margin-left: 5rem;
+  margin-top: 6.9rem ;
+  letter-spacing: .4rem ;
 }
 
 .texto {
@@ -27,7 +55,7 @@
 .quote {
   display: grid;
   flex-direction: column;
-  
+
   margin-left: 5rem;
 }
 

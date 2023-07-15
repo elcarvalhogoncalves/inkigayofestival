@@ -1,0 +1,160 @@
+.container {
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  display: relative;
+  height: 24.9rem;
+  width: 100%;
+  background-image: url(../../../../public/imagens/títulos_coreanos/Line-up.svg);
+  background-repeat:no-repeat;
+  background-position-x: 7rem ;
+  background-position-y: 5rem ;
+  
+
+}
+.title h1{
+  font-size: 6.4rem ;
+  margin-left: 5rem;
+  margin-top: 6.9rem ;
+  letter-spacing: .4rem ;
+}
+  
+.coreano{
+  display: absolute;
+  top: 0;
+}
+
+.body {
+  max-width: 128rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dias {
+  margin-bottom: 2.7rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  box-sizing: border-box;
+  height: 10.5rem;
+  width: 24.7rem;
+  border: none;
+
+  background-color: transparent;
+  color: white;
+  filter: brightness(50%);
+}
+
+.date:active {
+  filter: brightness(100%);
+}
+
+.date h1 {
+  font-size: 3.2rem;
+  border-bottom: 2px solid #fff;
+}
+
+.date p {
+  font-size: 2rem;
+}
+
+.cards {
+  justify-content: center;
+}
+
+.cards div {
+
+  width: 1180px;
+  height: 161px;
+  text-align: center;
+  
+  background-size: cover;
+  filter: brightness(80%);
+}
+
+.cards div:hover {
+  height: 50rem;
+  filter: brightness(100%);
+
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  
+}
+.cards div h1 {
+  font-size: 64px;
+  align-self: center;
+  filter: brightness(100%);
+}
+.cards div p {
+  opacity: 0;
+  font-size: 36px;
+  background: #8E05C2;
+}
+.cards div:hover p {
+  opacity: 100;
+  font-weight: 300;
+}
+
+.aespa {
+  background-image: url(../../../../public/imagens/line_up/Aespa.jpg);
+  background-position: center 33%;
+}
+
+.Psy {
+  background-image: url(../../../../public/imagens/line_up/psy.jpg);
+}
+
+.EXO {
+  background-image: url(../../../../public/imagens/line_up/EXO.jpg);
+  background-position: center 25%;
+}
+
+.Twice {
+  background-image: url(../../../../public/imagens/line_up/Twice.webp);
+  background-position: center 20%;
+}
+
+.Jungkook {
+  background-image: url(../../../../public/imagens/line_up/Jungkook.webp);
+  background-position: center 28%;
+}
+
+.Loona {
+  background-image: url(../../../../public/imagens/line_up/Loona.webp);
+  background-position: center 28%;
+}
+
+.BTS {
+  background-image: url(../../../../public/imagens/line_up/BTS-GETTY.jpg);
+  background-position: center 28%;
+}
+
+.BP {
+  background-image: url(../../../../public/imagens/line_up/blackpink.jpg);
+  background-position: center 19%;
+}
+
+.IU {
+  background-image: url(../../../../public/imagens/line_up/IU.webp);
+  background-position: center 33%;
+}
+
+.card-body {
+  align-items: center;
+}
+
+.card h2 {
+  align-items: center;
+}
