@@ -1,22 +1,28 @@
 "use client";
 import styles from "@/styles/components/ingresso/IngressoPagamento.module.css";
 import Image from "next/image";
+import { useState } from "react";
 
 interface Props {
   handleAvancar: () => void;
   handleVoltar: () => void;
+  totalPrice: number;
+  handlePagamento: (pgmt: string) => void;
 }
-
-type LoginFestival = {
-  id: number;
-  name: string;
-  userId: number;
-};
 
 export default function IngressoPagamento({
   handleAvancar,
   handleVoltar,
+  totalPrice,
+  handlePagamento,
 }: Props) {
+  const [formPay, setFormPay] = useState("");
+
+  function handleA() {
+    handlePagamento(formPay);
+    handleAvancar;
+  }
+
   return (
     <section className={styles.paymentSection}>
       <div className={styles.paymentTable}>
@@ -27,7 +33,10 @@ export default function IngressoPagamento({
         </ul>
         <ul className={styles.methodChoiceSection}>
           <hr className={styles.divider} />
-          <li className={styles.li}>
+          <li
+            className={styles.li}
+            onClick={() => setFormPay("Cartão de Crédito")}
+          >
             <input
               id="radio-1"
               type="radio"
@@ -47,7 +56,10 @@ export default function IngressoPagamento({
             </label>
           </li>
           <hr className={styles.divider} />
-          <li className={styles.li}>
+          <li
+            className={styles.li}
+            onClick={() => setFormPay("Cartão de Débito")}
+          >
             <input
               id="radio-2"
               type="radio"
@@ -67,7 +79,7 @@ export default function IngressoPagamento({
             </label>
           </li>
           <hr className={styles.divider} />
-          <li className={styles.li}>
+          <li className={styles.li} onClick={() => setFormPay("Google Pay")}>
             <input
               id="radio-3"
               type="radio"
@@ -87,7 +99,7 @@ export default function IngressoPagamento({
             </label>
           </li>
           <hr className={styles.divider} />
-          <li className={styles.li}>
+          <li className={styles.li} onClick={() => setFormPay("PayPal")}>
             <input
               id="radio-4"
               type="radio"
@@ -107,7 +119,7 @@ export default function IngressoPagamento({
             </label>
           </li>
           <hr className={styles.divider} />
-          <li className={styles.li}>
+          <li className={styles.li} onClick={() => setFormPay("Pix")}>
             <input
               id="radio-5"
               type="radio"
@@ -128,7 +140,13 @@ export default function IngressoPagamento({
           </li>
         </ul>
       </div>
-      <span className={styles.totalCart}>TOTAL: R$ 0,00</span>
+      <span className={styles.totalCart}>
+        TOTAL: R${" "}
+        {totalPrice.toLocaleString("pt-BR", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })}
+      </span>
       <aside className={styles.buttonsContainer}>
         <button className={styles.btnBack} onClick={handleVoltar}>
           <Image
@@ -140,7 +158,7 @@ export default function IngressoPagamento({
           />
           Voltar
         </button>
-        <button className={styles.btnNext} onClick={handleAvancar}>
+        <button className={styles.btnNext} onClick={handleA}>
           FINALIZAR COMPRA
         </button>
       </aside>

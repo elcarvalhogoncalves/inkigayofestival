@@ -8,8 +8,39 @@ import IngressoPagamento from "@/components/ingressos/pagamento";
 import IngressoFinalizar from "@/components/ingressos/finalizar";
 import Sucesso from "@/components/ingressos/success";
 
+interface Cart {
+  name: string;
+  total: number;
+  quantity: number;
+  metodoPagamento: string;
+  tiposIngresso: string;
+}
+
 export default function Ingresso() {
+  const [carrinho, setCarrinho] = useState<Cart>({
+    name: "string",
+    total: 0,
+    quantity: 0,
+    metodoPagamento: "string",
+    tiposIngresso: "string",
+  });
+  const [total, setTotal] = useState(0);
   const [etapaAtual, setEtapaAtual] = useState(1);
+
+  const handleTotal = (total: number) => {
+    setTotal(total);
+  };
+
+  const handleCart = (object: Cart) => {
+    // console.log(object, "Ola AnaPoli");
+    setCarrinho(object);
+  };
+
+  const handlePagamento = (pgt: string) => {
+    const aux = carrinho;
+    aux["metodoPagamento"] = pgt;
+    setCarrinho(aux);
+  };
 
   const handleAvancar = () => {
     setEtapaAtual(etapaAtual + 1);
@@ -57,11 +88,19 @@ export default function Ingresso() {
           </li>
         </ul>
       </section>
-      {etapaAtual === 1 && <IngressoCompras handleAvancar={handleAvancar} />}
+      {etapaAtual === 1 && (
+        <IngressoCompras
+          handleAvancar={handleAvancar}
+          totalPrice={handleTotal}
+          objectCart={handleCart}
+        />
+      )}
       {etapaAtual === 2 && (
         <IngressoPagamento
+          totalPrice={total}
           handleAvancar={handleAvancar}
           handleVoltar={handleVoltar}
+          handlePagamento={handlePagamento}
         />
       )}
       {etapaAtual === 3 && (
