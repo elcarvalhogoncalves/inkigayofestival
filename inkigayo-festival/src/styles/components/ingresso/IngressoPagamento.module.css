@@ -126,10 +126,26 @@
   }
 
   .divider {
-    width: 38rem;
+    width: 34rem;
+    margin-left: 2rem;
   }
 
   .totalCart {
+    font-size: 1.8rem;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem;
+    padding: 0;
+  }
+
+  .btnNext,
+  .btnBack {
+    margin-top: 2rem;
+    width: 17rem;
+    height: 5.8rem;
     font-size: 1.8rem;
   }
 }
