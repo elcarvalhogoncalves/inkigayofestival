@@ -171,7 +171,8 @@
 }
 
 .imagemArena {
-  width: 100%;
+  width: 58rem;
+  height: 67.8rem;
 }
 
 @media screen and (max-width: 60rem) {
