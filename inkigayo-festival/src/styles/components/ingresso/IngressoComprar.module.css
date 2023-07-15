@@ -19,8 +19,8 @@
   justify-content: center;
   align-items: center;
 
-  width: 210px;
-  height: 99px;
+  width: 21rem;
+  height: 9.9rem;
   flex-shrink: 0;
   background: #d9d9d9;
   color: #000000;
@@ -33,11 +33,11 @@
 }
 
 .divider {
-  width: 1000px;
+  width: 100rem;
 }
 
 .daystitle {
-  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 400;
@@ -46,7 +46,7 @@
 
 .datetitle {
   text-align: center;
-  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
@@ -71,22 +71,22 @@
   flex-direction: row;
   justify-content: space-around;
   justify-items: center;
-  padding: 24px;
+  padding: 2.4rem;
 }
 
 .tableItensList {
   display: flex;
   justify-content: space-around;
   justify-items: center;
-  padding: 24px;
+  padding: 2.4rem;
 }
 
 .titleTable {
-  width: 200px;
+  width: 20rem;
   text-align: center;
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 400;
-  line-height: 38.4px;
+  line-height: 3.84rem;
   list-style: none;
 }
 
@@ -94,8 +94,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  font-size: 24px;
+  width: 20rem;
+  font-size: 2.4rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -103,34 +103,34 @@
 .buttonAddSubtract {
   display: flex;
   flex-direction: row;
-  width: 200px;
+  width: 20rem;
   justify-content: center;
 }
 
 .workTime {
-  margin: 0 32px 0 32px;
+  margin: 0 3.2rem 0 3.2rem;
   display: relative;
-  margin-top: 15px;
-  font-size: 24px;
+  margin-top: 1.5rem;
+  font-size: 2.4rem;
   width: 2rem;
 }
 
 .btnMinus,
 .btnPlus {
   display: relative;
-  margin-top: 13px;
+  margin-top: 1.3rem;
 
-  width: 41px;
-  height: 41px;
+  width: 4.1rem;
+  height: 4.1rem;
 
   cursor: pointer;
 
   background-color: black;
   color: #610094;
   border-radius: 50%;
-  border: #610094 3px solid;
+  border: #610094 0.3rem solid;
 
-  font-size: 32px;
+  font-size: 3.2rem;
   text-align: center;
 }
 
@@ -138,9 +138,9 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 400;
-  line-height: 38.4px;
+  line-height: 3.84rem;
   padding-top: 4rem;
 }
 
@@ -151,13 +151,13 @@
   font-weight: 400;
   margin-top: 4rem;
 
-  width: 220px;
-  height: 89px;
+  width: 22rem;
+  height: 8.9rem;
   background: rgba(62, 6, 95, 1);
 
   cursor: pointer;
-  padding: 16px;
-  font-size: 24px;
+  padding: 1.6rem;
+  font-size: 2.4rem;
   color: #fcfcfc;
   border: none;
 }
@@ -174,9 +174,9 @@
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 60rem) {
   .cardsDays {
-    margin-top: 10px;
+    margin-top: 1rem;
   }
 
   .cardsDaysList {
@@ -184,8 +184,8 @@
   }
 
   .cardsDaysItem {
-    width: 110px;
-    height: 55px;
+    width: 11rem;
+    height: 5.5rem;
   }
 
   .daystitle {
@@ -198,39 +198,39 @@
   }
 
   .sectionIngresso {
-    margin: 10px;
+    margin: 1rem;
     height: 0%;
   }
 
   .tableTitles {
-    padding: 0px;
-    margin: 20px;
+    padding: 0rem;
+    margin: 2rem;
   }
 
   .tableItensList {
-    padding: 0px;
-    margin: 10px;
-    width: 340px;
+    padding: 0rem;
+    margin: 1rem;
+    width: 34rem;
     display: flex;
     justify-content: flex-start;
   }
 
   .titleTable {
-    width: 101px;
-    height: 19px;
-    font-size: 16px;
+    width: 10.1rem;
+    height: 1.9rem;
+    font-size: 1.6rem;
   }
 
   .td {
-    width: 98px;
-    height: 38px;
-    font-size: 16px;
-    margin-left: 12px;
+    width: 9.8rem;
+    height: 3.8rem;
+    font-size: 1.6rem;
+    margin-left: 1.2rem;
   }
 
   .workTime {
-    margin: 16px;
-    font-size: 14px;
+    margin: 1.6rem;
+    font-size: 1.4rem;
     width: 1rem;
     display: flex;
     align-items: center;
@@ -239,25 +239,25 @@
   .buttonAddSubtract {
     width: 0;
     display: relative;
-    margin: -5px -120px 0px 0px;
+    margin: -0.5rem -12rem 0rem 0rem;
   }
 
   .btnMinus,
   .btnPlus {
-    width: 28px;
-    height: 28px;
+    width: 2.8rem;
+    height: 2.8rem;
     display: flex;
     align-items: center;
     justify-content: right;
   }
 
   .divider {
-    width: 360px;
+    width: 36rem;
   }
 
   .totalCart {
     padding-top: 2rem;
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 
   .btnNext {
