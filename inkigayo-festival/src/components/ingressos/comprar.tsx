@@ -289,7 +289,9 @@ export default function IngressoCompras({
 
     objectCart(objetoCart);
     totalPrice(calculateTotal());
-    handleAvancar();
+    if (calculateTotal() > 0) {
+      handleAvancar();
+    }
   }
   console.log(cart);
   return (

@@ -110,7 +110,6 @@ export default function Ingresso() {
           handleCart={carrinho}
         />
       )}
-      {etapaAtual === 4 && <Sucesso />}
     </main>
   );
 }

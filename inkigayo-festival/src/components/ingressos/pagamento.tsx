@@ -20,7 +20,9 @@ export default function IngressoPagamento({
 
   function handleA() {
     handlePagamento(formPay);
-    handleAvancar();
+    if (formPay !== "") {
+      handleAvancar();
+    }
   }
 
   return (

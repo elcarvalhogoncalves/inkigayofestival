@@ -28,7 +28,7 @@ export default function IngressoFinalizar({
           Confira as Informações do seu Pedido
         </span>
         <hr className={styles.dividerBox} />
-        <table className={styles.informationTable}>
+        <div className={styles.informationTable}>
           <label className={styles.tableTitle}>INFORMAÇÕES DO PEDIDO</label>
           <ul className={styles.informationList}>
             <li className={styles.informationListItem}>
@@ -47,7 +47,7 @@ export default function IngressoFinalizar({
               Método de pagamento: {infoCart.metodoPagamento}
             </li>
           </ul>
-        </table>
+        </div>
         <aside className={styles.buttonsContainer}>
           <button className={styles.btnBack} onClick={handleVoltar}>
             <Image
