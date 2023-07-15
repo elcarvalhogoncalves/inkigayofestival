@@ -25,6 +25,7 @@ export async function GET(request: Request) {
 
             delete ingressoType[j].id;
             delete ingressoType[j].daysId;
+            delete ingressoType[j].quantidade;
         }
         aux["tickets"] = ingressoType
         data.push(aux);

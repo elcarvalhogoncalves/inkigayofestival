@@ -1,4 +1,5 @@
 import NextAuth from 'next-auth'
+import { NextAuthOptions } from 'next-auth'
 import { PrismaClient } from '@prisma/client'
 import FacebookProvider from 'next-auth/providers/facebook'
 import GoogleProvider from 'next-auth/providers/google'
@@ -15,14 +16,8 @@ const googleClientId: string = process.env.GOOGLE_ID || '';
 const googleClientSecret: string = process.env.GOOGLE_SECRET || '';
 
 
-export const authOption = {
+export const authOption : NextAuthOptions = {
   providers: [
-    // OAuth authentication providers...
-    // FacebookProvider({
-    //   clientId: process.env.FACEBOOK_ID,
-    //   clientSecret: process.env.FACEBOOK_SECRET
-    // }),
-
     GoogleProvider({
       clientId: googleClientId,
       clientSecret: googleClientSecret
@@ -34,33 +29,36 @@ export const authOption = {
           email:    { label: "E-mail", type: "text", placeholder: "exemple@example.com" },
           password: { label: "Password", type: "password" }
         },
-        async authorize(credentials: { email: string; password: string; }, req){
-            const userAccount = await prisma.user.findUnique({
+        async authorize(credentials, req) : Promise<any> {
+            const user = await prisma.user.findUnique({
                 where: {
                     email: credentials?.email,
                 },
             });
-            if(!userAccount) {
+            if(!user) {
                 throw new Error("Usuário não encontrado.");
             }
             const pass = credentials?.password || '';
-            const checkPassword = await compare(pass , userAccount.senha);
+            const checkPassword = await compare(pass , user.senha);
 
-            if(!checkPassword || userAccount.email !== credentials?.email) {
+            if(!checkPassword || user.email !== credentials?.email) {
                 throw new Error(`E-mail ou senha inválidos.`);
             }
-            if (userAccount) {
-                return userAccount
+            if (user) {
+                return user
             } else {
                 return null
             }
         }
-      } as any),
+      }),
 
   ],
     pages: {
         signIn: '/signin',
     },
+    session: {
+        strategy: 'jwt',
+    }
 
 };
 
