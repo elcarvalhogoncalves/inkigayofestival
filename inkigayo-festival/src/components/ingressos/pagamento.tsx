@@ -46,6 +46,13 @@ export default function IngressoPagamento({
               value="Cartao_de_Credito"
               className={styles.checkbox}
             />
+            <Image
+              className={styles.Image}
+              src="/imagens/ingressos/cardLogo.svg"
+              alt="Cartão de Crédito"
+              width={47}
+              height={47}
+            />
             <label htmlFor="radio-1" className={styles.paymentMethod}>
               Cartão de Crédito
             </label>
