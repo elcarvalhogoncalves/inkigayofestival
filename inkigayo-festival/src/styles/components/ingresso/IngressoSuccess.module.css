@@ -46,11 +46,41 @@
 
   width: 220px;
   height: 89px;
-  background: #610094;
+  background: rgba(62, 6, 95, 1);
 
   cursor: pointer;
   border: none;
   padding: 16px;
   font-size: 24px;
   color: #fcfcfc;
+}
+
+@media screen and (max-width: 600px) {
+  .successSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .successTitle {
+    text-align: center;
+    width: 15rem;
+    font-size: 2.4rem;
+  }
+
+  .pdfBox {
+    width: 350px;
+    height: 30px;
+  }
+
+  .successText {
+    font-size: 1.8rem;
+  }
+
+  .btnFinish {
+    margin-top: 4rem;
+    width: 17rem;
+    height: 5.8rem;
+    font-size: 1.8rem;
+  }
 }
