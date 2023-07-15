@@ -21,6 +21,10 @@ export default function IngressoFinalizar({
   handleCart,
 }: Props) {
   const infoCart = handleCart;
+  const totalFloat = infoCart.total.toLocaleString("pt-BR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
   return (
     <>
       <section className={styles.finalSection}>
@@ -41,7 +45,7 @@ export default function IngressoFinalizar({
               Quantidade de ingressos: {infoCart.quantity}
             </li>
             <li className={styles.informationListItem}>
-              Valor total: R$ {infoCart.total}
+              Valor total: R$ {totalFloat}
             </li>
             <li className={styles.informationListItem}>
               Método de pagamento: {infoCart.metodoPagamento}
