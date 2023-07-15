@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Sucesso() {
   return (
-    <>
+    <main className={styles.main}>
       <section className={styles.successSection}>
         <span className={styles.successTitle}>
           COMPRA FINALIZADA COM SUCESSO!
@@ -20,6 +20,6 @@ export default function Sucesso() {
           />
         </div>
       </section>
-    </>
+    </main>
   );
 }

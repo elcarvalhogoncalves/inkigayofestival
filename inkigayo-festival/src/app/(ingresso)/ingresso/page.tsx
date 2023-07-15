@@ -58,7 +58,8 @@ export default function Ingresso() {
             <span
               className={`${styles.progressCount}  ${
                 etapaAtual === 1 ? styles.progressCountActive : ""
-              }`}
+              }
+              ${etapaAtual === 4 && styles.progressCountActive}`}
             >
               1
             </span>
@@ -69,7 +70,9 @@ export default function Ingresso() {
             <span
               className={`${styles.progressCount}  ${
                 etapaAtual === 2 ? styles.progressCountActive : ""
-              }`}
+              }
+              ${etapaAtual === 4 && styles.progressCountActive}
+              `}
             >
               2
             </span>
@@ -80,7 +83,9 @@ export default function Ingresso() {
             <span
               className={`${styles.progressCount}  ${
                 etapaAtual === 3 ? styles.progressCountActive : ""
-              }`}
+              }
+              ${etapaAtual === 4 && styles.progressCountActive}
+              `}
             >
               3
             </span>
@@ -110,6 +115,7 @@ export default function Ingresso() {
           handleCart={carrinho}
         />
       )}
+      {etapaAtual === 4 && <Sucesso />}
     </main>
   );
 }
