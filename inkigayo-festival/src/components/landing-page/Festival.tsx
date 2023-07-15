@@ -38,7 +38,7 @@ export default function Festival() {
         <Image src={foto} width={630} height={832} alt={""} />
       </figure>
         </div>
-      </div>
+      
     </>
-  );
+  )
 }
