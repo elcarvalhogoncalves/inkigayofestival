@@ -60,39 +60,43 @@ export default function Galeria() {
   }, [carrouselIndex]);
 
   return (
-    <section className={styles.container}>
-      <div className={styles.body_gallery}>
-        <h1 className={styles.title}>Galeria</h1>
-        <div className={styles.container_gallery}>
+    <main className={styles.body}>
+      <section className={styles.container}>
 
-          <div className={styles.gallery}>
-            <Image 
-              src={pictures[carrouselIndex].url} 
-              fill={true}
-              style={{
-                objectFit: 'cover',
-                objectPosition: 'end',
-                overflow: 'hidden',
-              }}
-                alt={`Foto: ${pictures[carrouselIndex].description}`}
-            />
+        <div className={styles.body_gallery}>
+          <h1 className={styles.title}>Galeria</h1>
+          <div className={styles.container_gallery}>
+
+            <div className={styles.gallery}>
+              <Image 
+                src={pictures[carrouselIndex].url} 
+                fill={true}
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'end',
+                  overflow: 'hidden',
+                }}
+                  alt={`Foto: ${pictures[carrouselIndex].description}`}
+              />
+            
+              <span className={styles.description}>
+                  <p>
+                  {pictures[carrouselIndex].description} 
+                  </p>
+              </span>
+              
+              <span onClick={prev} className={`${styles.arrow} ${styles.arrow_left}`}>
+                <FontAwesomeIcon icon={faAngleLeft} />
+              </span>
+              <span onClick={next} className={`${styles.arrow} ${styles.arrow_right}`}>
+                <FontAwesomeIcon icon={faAngleRight} />
+              </span>
+            </div>
           </div>
-          <span className={styles.description}>
-              <p>
-              {pictures[carrouselIndex].description} 
-              </p>
-          </span>
-          
-          <span onClick={prev} className={`${styles.arrow} ${styles.arrow_left}`}>
-            <FontAwesomeIcon icon={faAngleLeft} />
-          </span>
-          <span onClick={next} className={`${styles.arrow} ${styles.arrow_right}`}>
-            <FontAwesomeIcon icon={faAngleRight} />
-          </span>
-          
+
         </div>
 
-      </div>
-    </section>
+      </section>
+    </main>
   )
 }

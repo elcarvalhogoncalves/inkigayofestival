@@ -87,7 +87,8 @@
 
 }
 
-@media screen and (max-width: 1020px) {
+
+@media screen and (max-width: 770px) {
     .bottom_gradient{
         justify-content: center;
     }
