@@ -30,7 +30,7 @@
 
 .successTitle {
   font-size: 4.2rem;
-  color: #8e05c2;
+  color: #c4a8ff;
 }
 
 .successText {
@@ -64,8 +64,7 @@
 
   .successTitle {
     text-align: center;
-    width: 15rem;
-    font-size: 2.4rem;
+    font-size: 3.2rem;
   }
 
   .pdfBox {
@@ -74,7 +73,7 @@
   }
 
   .successText {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
   }
 
   .btnFinish {

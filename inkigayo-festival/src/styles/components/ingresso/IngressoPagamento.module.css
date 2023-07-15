@@ -41,11 +41,6 @@
   height: 3.5rem;
 }
 
-.checkbox::before {
-  transform-origin: bottom left;
-  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-}
-
 .paymentMethod {
   cursor: pointer;
   margin: 3.2rem 3.2rem 0rem 3.2rem;
@@ -126,7 +121,7 @@
     margin: 1rem 3.2rem 1rem 3.2rem;
     height: 5.8rem;
     width: 18.2rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .divider {
@@ -148,7 +143,7 @@
   .btnNext,
   .btnBack {
     margin-top: 2rem;
-    width: 17rem;
+    width: 13rem;
     height: 5.8rem;
     font-size: 1.8rem;
   }

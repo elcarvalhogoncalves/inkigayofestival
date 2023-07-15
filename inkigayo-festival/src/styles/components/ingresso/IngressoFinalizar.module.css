@@ -22,7 +22,6 @@
   padding-inline: 4rem;
   padding-block: 4rem;
   margin-top: 5rem;
-  border: #fcfcfc solid 0.1rem;
   border-radius: 1.5rem;
   width: 91.8rem;
   box-shadow: 0.5rem 0.5rem 0.4rem 0.2rem rgba(255, 255, 255, 0.1),
@@ -101,7 +100,7 @@
   }
 
   .informationListItem {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .buttonsContainer {
