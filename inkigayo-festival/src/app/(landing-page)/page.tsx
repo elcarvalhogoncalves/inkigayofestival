@@ -11,6 +11,11 @@ export default function LandingPage() {
     <>
       <Navbar />
       <Home />
+      <Festival />
+      <LineUp />
+      <Galeria />
+      <FAQ />
+      <Footer />
     </>
   )
 }
