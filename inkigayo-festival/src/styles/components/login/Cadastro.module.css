@@ -13,7 +13,7 @@
 }
 
 .logo{
-    background: url('../../../../public/imagens/logo.svg') no-repeat;
+    background: url('../../../../public/imagens/logoW.svg') no-repeat;
     background-size: contain;
     cursor: pointer;
     width: 11.5rem;
@@ -102,6 +102,9 @@
 }
 
 .footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
     margin-block: 2.4rem;   
 }
 
@@ -135,4 +138,27 @@
 }
 .eye:hover{
     color: rgb(0, 0, 0, .7);
+}
+
+@media screen and (max-width: 900px) {
+    .login_section{
+        gap: 2.5rem;
+    }
+    .title{
+        align-self: center;
+    }
+    .form{
+        gap : 4.4rem;
+    }
+    .input{
+        width: 38rem; 
+    }
+    .fieldset{
+        border: 0;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+    }
+    .footer{
+        margin-block: 4.4rem;   
+    }
 }

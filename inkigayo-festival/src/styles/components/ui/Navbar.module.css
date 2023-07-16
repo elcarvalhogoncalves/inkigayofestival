@@ -1,4 +1,4 @@
-.navbar{
+/* .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,15 +71,195 @@
     display: none;
 }
 
-
-@media screen and (max-width: 1020px) {
+@media screen and (max-width:770px) {
     .header{
         display: flex;
         height: 18.1rem;
         width: 100%;
         min-width: 30rem;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+        gap: 11.3rem; 
+    }
+
+    .icon{
+        display: flex;
+        color: #3E065F;
+        align-self: flex-start;
+        height: 5rem;
+        width: 7.5rem;
+        font-weight: lighter;
+        cursor: pointer;
+    }
+
+    .iconX{
+        display: none; 
+    }
+
+    .iconX_open{
+        display: flex;
+    }
+    .iconB{
+        display: flex;
+    }
+    .iconB_open{
+        display: none;
+    
+    }
+
+    .logo{
+        background: url('../../../../public/imagens/logoW.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 13.8rem;
+        height: 13.1rem;
+    }
+
+    .logo_open{
+        background: url('../../../../public/imagens/logoB.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .scrolled{
+        position: absolute;
+        background-color: rgb(0, 0, 0, 0);
+        padding-inline: 6.5rem;
+    }
+
+    .navbar{
+        flex-direction: column;
+        justify-content: start;
+        padding-inline: 2.7rem; 
+        padding-block: 3rem;
+        gap: 8rem;
+        height: 100%;
+    }
+    .navbar_open{
+        background-color: #FFF;
+    }
+
+    .menu{
+        flex-direction: column;
+
+        gap: 5rem;     
+        display: none;   
+    }
+    .menu_open{
+        display: flex;
+    }
+
+    .list_item{
+        font-size: 32px;
+        color: #3E065F;
+    }
+    .login_button{
+        border: .3rem solid #3E065F;
+        color: #3E065F;
+        display: none;
+    }
+
+    .login_button_open{
+        display:inline
+    }
+    
+    
+    .login_button:hover{
+        background-color: #3E065F;
+        color: #fff;
+    }
+    
+}
+@media screen and (max-width: 1020px) {
+    .menu{
+        gap: 1.8rem;
+        font-size: 1.4rem;
+    }
+}
+
+ */
+
+ .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position:absolute;
+    padding-inline: 6.5rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    transition: .4s;
+    z-index: 1;
+}
+
+.scrolled{
+    position: fixed;
+    background-color: rgb(0, 0, 0, .7);
+    padding-inline: 6.5rem;
+}
+
+.login_button{
+    width: 15.6rem;
+    height: 5.8rem;
+    background: transparent;
+    border: .3rem solid #FFF;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 2.4rem;
+    transition: .4s;
+    
+}
+
+.login_button:hover{
+    background-color: #FFF;
+    color: #3E065F;
+}
+
+.logo{
+    background: url('../../../../public/imagens/logoW.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    width: 11.5rem;
+    height: 11rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2.6rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.list_item:hover{
+    text-decoration: underline;
+}
+
+.link{
+    color: white;
+}
+
+.icon{
+    display: none;
+}
+
+.display_none{
+    display: none;
+}
+
+@media screen and (max-width:770px) {
+    .header{
+        display: flex;
+        height: 18.1rem;
+        width: 100%;
+        min-width: 30rem;
+        justify-content: space-between;
+        align-items: flex-start;
         gap: 11.3rem; 
     }
 
@@ -114,8 +294,8 @@
         background: url('../../../../public/imagens/logoW.svg') no-repeat;
         background-size: contain;
         background-position: center;
-        width: 18.8rem;
-        height: 18.1rem;
+        width: 13.8rem;
+        height: 13.1rem;
     }
 
     .logo_open{
@@ -124,6 +304,11 @@
         background-position: center;
     }
 
+    .scrolled{
+        position: absolute;
+        background-color: rgb(0, 0, 0, 0);
+        padding-inline: 6.5rem;
+    }
 
     .navbar{
         flex-direction: column;
@@ -139,6 +324,7 @@
 
     .menu{
         flex-direction: column;
+
         gap: 5rem;     
         display: none;   
     }
@@ -166,4 +352,10 @@
         color: #fff;
     }
     
+}
+@media screen and (max-width: 1020px) {
+    .menu{
+        gap: 1.8rem;
+        font-size: 1.4rem;
+    }
 }

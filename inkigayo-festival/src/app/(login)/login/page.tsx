@@ -1,6 +1,6 @@
 'use client'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import styles from '@/styles/components/login/Login.module.css'
 import Link from "next/link";
 import { useState } from "react";
@@ -88,12 +88,22 @@ export default function Login() {
             <label className={styles.password}>
               <input onChange={(e) => setPassword(e.target.value)} value={password} className={styles.input} placeholder="Senha" type={`${showPassword ? "text" : "password"}`} name="password" />
               <span onClick={() => setShowPassword(!showPassword)} className={styles.eye}>
-                <FontAwesomeIcon icon={faEye} style={{height: '3.4rem', width: '3.4rem'}}/>
+                {showPassword === true ?
+                  <>
+                    <FontAwesomeIcon icon={faEyeSlash} style={{height: '3.4rem', width: '3.4rem'}}/>
+                  </>
+                  :
+                  <>
+                    <FontAwesomeIcon icon={faEye} style={{height: '3.4rem', width: '3.4rem'}}/>								
+                  </>
+                }
               </span>
             </label>
             <p className={styles.forgot}>Esqueci minha senha.</p>
             <button type="submit" className={styles.login}>Entrar</button>
-            <p>Não tem uma conta? <span className={styles.create_span}><Link href="./cadastro" className={styles.create_link}>Criar uma agora.</Link></span></p>
+            <p> 
+              Não tem uma conta? <span className={styles.create_span}><Link href="./cadastro" className={styles.create_link}>Criar uma agora.</Link></span>
+            </p>
           </form>
 
           <footer className={styles.footer}>

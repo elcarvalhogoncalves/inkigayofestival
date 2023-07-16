@@ -73,7 +73,7 @@ export default function Navbar() {
           <li className={styles.list_item}>Ingresso</li>
         </Link>
         {session && (
-            <Link className={styles.link} href={"http://localhost:3000/profile"}>
+            <Link className={styles.link} href={"http://localhost:3000/meus-ingressos"}>
               <li className={styles.list_item}>Meus Ingressos</li>
             </Link>
         )}
