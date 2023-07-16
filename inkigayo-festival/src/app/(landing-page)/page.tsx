@@ -12,8 +12,8 @@ export default function LandingPage() {
       {/* <Navbar/> */}
       {/* <Home/> */}
       {/* <Festival/> */}
-      <LineUp/>
-      {/* <FAQ /> */}
+      {/* <LineUp/> */}
+      <FAQ />
       {/* <Footer/> */}
     </>
   );

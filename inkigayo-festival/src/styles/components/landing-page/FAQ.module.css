@@ -1,15 +1,15 @@
 .container {
-  height: 100%;
-  width: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    max-height: 100%;
+    width: 128rem;
+    background-color: red;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .body {
-  max-width: 128rem;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,22 +19,21 @@
 
 .title {
   display: relative;
+  display: flex;
+  align-items: center;
+  height: 26rem;
   width: 100%;
   background-image: url(../../../../public/imagens/títulos_coreanos/FAQ.svg);
   background-repeat: no-repeat;
   background-position-x: 12rem;
   background-position-y: 8rem;
-  margin: -4rem 0rem 5rem 20rem;
-  padding: 9rem 1rem 1rem 0rem;
+
 }
 
 .h1 {
   font-size: 6.4rem;
 }
 
-.FAQ {
-  margin: 3rem 0rem 5rem 10rem;
-}
 
 .h2 {
   font-size: 3.2rem;

@@ -41,10 +41,11 @@ export default function FAQ() {
     <>
       <section className={styles.conteiner} id="faq">
         <div className={styles.body}>
-          <div className={styles.title}>
-            <h1 className={styles.h1}>F.A.Q</h1>
-          </div>
+
           <div className={styles.FAQ}>
+            <div className={styles.title}>
+              <h1 className={styles.h1}>F.A.Q</h1>
+            </div>
             <div className={styles.QandA}>
               <div className={styles.question}>
                 <h2 className={styles.h2}>
