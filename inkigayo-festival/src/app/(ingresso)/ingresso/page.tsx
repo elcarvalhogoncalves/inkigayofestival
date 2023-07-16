@@ -78,74 +78,77 @@ export default function Ingresso() {
   }
 
   return (
-    <main className={styles.main}>
-      <section className={styles.stepWizard}>
-        <ul className={styles.stepWizardList}>
-          <li className={styles.stepWizardItem}>
-            <span
-              className={`${styles.progressCount}  ${
-                etapaAtual === 1 ? styles.progressCountActive : ""
-              }
-              ${etapaAtual === 2 && styles.progressCountActive}
-              ${etapaAtual === 3 && styles.progressCountActive}
-              ${etapaAtual === 4 && styles.progressCountActiveSucesso}`}
-            >
-              1
-            </span>
-            <span className={styles.progressLabel}>Comprar Ingresso(s)</span>
-          </li>
+    <>
+      <Navbar />
+      <main className={styles.main}>
+        <section className={styles.stepWizard}>
+          <ul className={styles.stepWizardList}>
+            <li className={styles.stepWizardItem}>
+              <span
+                className={`${styles.progressCount}  ${
+                  etapaAtual === 1 ? styles.progressCountActive : ""
+                }
+                ${etapaAtual === 2 && styles.progressCountActive}
+                ${etapaAtual === 3 && styles.progressCountActive}
+                ${etapaAtual === 4 && styles.progressCountActiveSucesso}`}
+              >
+                1
+              </span>
+              <span className={styles.progressLabel}>Comprar Ingresso(s)</span>
+            </li>
 
-          <li className={styles.stepWizardItem}>
-            <span
-              className={`${styles.progressCount}  ${
-                etapaAtual === 2 ? styles.progressCountActive : ""
-              }
-              ${etapaAtual === 3 && styles.progressCountActive}
-              ${etapaAtual === 4 && styles.progressCountActiveSucesso}
-              `}
-            >
-              2
-            </span>
-            <span className={styles.progressLabel}>Pagamento</span>
-          </li>
+            <li className={styles.stepWizardItem}>
+              <span
+                className={`${styles.progressCount}  ${
+                  etapaAtual === 2 ? styles.progressCountActive : ""
+                }
+                ${etapaAtual === 3 && styles.progressCountActive}
+                ${etapaAtual === 4 && styles.progressCountActiveSucesso}
+                `}
+              >
+                2
+              </span>
+              <span className={styles.progressLabel}>Pagamento</span>
+            </li>
 
-          <li className={styles.stepWizardItem}>
-            <span
-              className={`${styles.progressCount}  ${
-                etapaAtual === 3 ? styles.progressCountActive : ""
-              }
-              ${etapaAtual === 4 && styles.progressCountActiveSucesso}
-              `}
-            >
-              3
-            </span>
-            <span className={styles.progressLabel}>Finalizar</span>
-          </li>
-        </ul>
-      </section>
-      {etapaAtual === 1 && (
-        <IngressoCompras
-          handleAvancar={handleAvancar}
-          totalPrice={handleTotal}
-          objectCart={handleCart}
-        />
-      )}
-      {etapaAtual === 2 && (
-        <IngressoPagamento
-          totalPrice={total}
-          handleAvancar={handleAvancar}
-          handleVoltar={handleVoltar}
-          handlePagamento={handlePagamento}
-        />
-      )}
-      {etapaAtual === 3 && (
-        <IngressoFinalizar
-          handleAvancar={handleAvancar}
-          handleVoltar={handleVoltar}
-          handleCart={carrinho}
-        />
-      )}
-      {etapaAtual === 4 && <Sucesso />}
-    </main>
+            <li className={styles.stepWizardItem}>
+              <span
+                className={`${styles.progressCount}  ${
+                  etapaAtual === 3 ? styles.progressCountActive : ""
+                }
+                ${etapaAtual === 4 && styles.progressCountActiveSucesso}
+                `}
+              >
+                3
+              </span>
+              <span className={styles.progressLabel}>Finalizar</span>
+            </li>
+          </ul>
+        </section>
+        {etapaAtual === 1 && (
+          <IngressoCompras
+            handleAvancar={handleAvancar}
+            totalPrice={handleTotal}
+            objectCart={handleCart}
+          />
+        )}
+        {etapaAtual === 2 && (
+          <IngressoPagamento
+            totalPrice={total}
+            handleAvancar={handleAvancar}
+            handleVoltar={handleVoltar}
+            handlePagamento={handlePagamento}
+          />
+        )}
+        {etapaAtual === 3 && (
+          <IngressoFinalizar
+            handleAvancar={handleAvancar}
+            handleVoltar={handleVoltar}
+            handleCart={carrinho}
+          />
+        )}
+        {etapaAtual === 4 && <Sucesso />}
+      </main>
+    </>
   );
 }

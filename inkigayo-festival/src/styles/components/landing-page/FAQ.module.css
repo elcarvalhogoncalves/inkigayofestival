@@ -83,7 +83,7 @@
 
 @media screen and (max-width: 60rem) {
   .body {
-    margin-top: 2rem;
+    margin-bottom: 4rem;
     padding: 0;
     display: flex;
     justify-content: center;

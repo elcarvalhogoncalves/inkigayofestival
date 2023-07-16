@@ -60,7 +60,7 @@ export default function Galeria() {
   }, [carrouselIndex]);
 
   return (
-    <main className={styles.body}>
+    <main id='galeria' className={styles.body}>
       <section className={styles.container}>
 
         <div className={styles.body_gallery}>

@@ -27,11 +27,13 @@ export default function Profile() {
 
 
     useEffect(() => {
+        setLoading(true)
         fetch('/api/ticket?id=' + session.user.email)
           .then(res => res.json())
           .then(data => {
             setTickets(data.tickets)
             setUser(data.user)
+            setLoading(false)
         })
 
       }, [])
@@ -49,6 +51,7 @@ export default function Profile() {
     if(status === "loading"){
         return <Loading />
     }
+
     return (
         <main className={styles.profile_main}>
             <section className={styles.profile_section}>
@@ -59,7 +62,7 @@ export default function Profile() {
                 <hr className={styles.line} />
 
                 <section className={styles.profile_tickets}>
-                {tickets.map((ticket) => (
+                {loading ? <Loading /> : tickets.length > 0 ? tickets.map((ticket) => (
                         <article key={ticket.id} className={styles.ticket}>
                             <Image src={`http://qrickit.com/api/qr.php?d=${ticket.id}&addtext=Inkigayo+Festival&txtcolor=8E05C2&fgdcolor=8E05C2&bgdcolor=000000&qrsize=240&t=p&e=m`} width={200} height={200} alt="Qr code" />
                             <div className={styles.ticket_info}>
@@ -76,7 +79,10 @@ export default function Profile() {
 
                             </div>
                         </article>
-                        ))
+                        )) :
+                        <article className={`${styles.ticket} ${styles.ticket_nothing}`}>
+                            <p>Você ainda não comprou nenhum ingresso :(</p>
+                        </article>
                     }
                     </section>
 

@@ -257,10 +257,10 @@
         display: flex;
         height: 18.1rem;
         width: 100%;
+        padding-inline: 1.3rem;
         min-width: 30rem;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 11.3rem; 
     }
 
     .icon{
@@ -316,15 +316,14 @@
         padding-inline: 2.7rem; 
         padding-block: 3rem;
         gap: 8rem;
-        height: 100%;
     }
     .navbar_open{
         background-color: #FFF;
+        min-height: 100vh;
     }
 
     .menu{
         flex-direction: column;
-
         gap: 5rem;     
         display: none;   
     }
