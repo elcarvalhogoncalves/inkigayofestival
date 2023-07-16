@@ -1,10 +1,16 @@
+.container{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .up {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  margin-top: 10.1rem;
 }
 .h1 {
   font-size: 3.2rem;
@@ -20,14 +26,14 @@
 .inputContainer {
   display: flex;
   justify-content: center;
-  height: 6.7rem;
-  margin-bottom: 9.1rem;
+  margin-bottom: 3rem;
   margin-top: 4.3rem;
   padding-left: 2rem;
 }
 
 .input {
   width: 58rem;
+  height: 6.7rem;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
   font-size: 2rem;
@@ -47,20 +53,22 @@
 }
 
 .bottom {
-  height: 22.8rem;
+  height: 26rem;
   background-color: rgba(62, 6, 95, 0.5);
-
+  margin-top: 7.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .iconLine {
-  width: 58rem;
+  max-width: 78rem;
   height: 3rem;
   margin-top: 4rem;
   margin-bottom: 6rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 5.5rem;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -83,11 +91,55 @@
   font-size: 1.8rem;
 }
 
-@media screen and (max-width: 60rem) {
+.twitter{
+  background-image: url(../../../../public/imagens/social-media/twitter.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 45.833px;
+}
+.instagram{
+  background-image: url(../../../../public/imagens/social-media/instagram.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 55px;
+}
+.youtube{
+  background-image: url(../../../../public/imagens/social-media/youtube.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 38.5px;
+}
+.spotify{
+  background-image: url(../../../../public/imagens/social-media/spotify.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 55px;
+}
+.facebook{
+  background-image: url(../../../../public/imagens/social-media/facebook.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 55px;
+}
+.tiktok{
+  background-image: url(../../../../public/imagens/social-media/tiktok.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 55px;
+}
+
+@media screen and (max-width: 770px) {
   .up {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0rem;
   }
 
   .h1 {
@@ -97,27 +149,65 @@
   .h2 {
     font-size: 1.8rem;
   }
+  .iconLine {
+    gap: 25px;
+  }
+
+
+  .twitter{
+    min-width: 27px;
+    min-height: 22px;
+  }
+  .instagram{
+    min-width: 27px;
+    min-height: 27px;
+  }
+  .youtube{
+    min-width: 27px;
+    min-height: 19px;
+  }
+  .spotify{
+    min-width: 27px;
+    min-height: 27px;
+  }
+  .facebook{
+    min-width: 27px;
+    min-height: 27px;
+  }
+  .tiktok{
+    min-width: 27px;
+    min-height: 27px;
+  }
 
   .inputContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 4.3rem;
+    padding-left: 2rem;
+    
   }
 
+  .bottom{
+    margin-top: 0rem;
+  }
+
+
   .input {
-    width: 29.2rem;
+    max-width: 29.2rem;
     height: 3.4rem;
     font-size: 1.6rem;
     border-radius: 2rem;
   }
 
   .buttonEnviar {
-    margin-top: 2rem;
     width: 9.5rem;
-    height: 3.2rem;
     font-size: 1.6rem;
-    border-radius: 0;
+    padding-block: 1.5rem;
+    border-radius: 0px;
   }
 
   .infos {

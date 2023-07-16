@@ -13,8 +13,8 @@ export default function LandingPage() {
       {/* <Home/> */}
       {/* <Festival/> */}
       {/* <LineUp/> */}
-      <FAQ />
-      {/* <Footer/> */}
+      {/* <FAQ /> */}
+      <Footer/>
     </>
   );
 }
