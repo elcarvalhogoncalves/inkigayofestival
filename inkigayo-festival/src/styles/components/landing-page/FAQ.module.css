@@ -82,30 +82,47 @@
   font-size: 2.4rem;
 }
 
-@media screen and (max-width: 43rem) {
+@media screen and (max-width: 60rem) {
   .body {
-    width: 43rem;
+    margin-top: 2rem;
+    padding: 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
+
   .title {
-    background-position: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10rem;
+    background-position-x: 5.5rem;
   }
-  .title h1 {
+
+  .h1 {
     font-size: 6.4rem;
   }
 
-  .QandA {
-    width: 100%;
+  .h2 {
+    font-size: 1.8rem;
+    margin: 0;
   }
 
-  .question {
+  .colortext {
     font-size: 1.8rem;
   }
+
+  .FAQ {
+    margin: 2rem;
+  }
+
   .answer {
-    font-size: 1.6rem;
+    width: 34rem;
+    font-size: 16px;
   }
   .vermais {
-    margin-left: 16.6rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+    margin-left: 12rem;
   }
 }

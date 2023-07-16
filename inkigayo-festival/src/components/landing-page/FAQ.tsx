@@ -83,10 +83,8 @@ export default function FAQ() {
               {Q2 === true && (
                 <>
                   <div className={styles.answer}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    O Festival Inkigayo será realizado em na Itaipava Arena
+                    Fonte Nova, em Salvador, nos dias 08, 09 e 10 de Setembro.
                   </div>
                 </>
               )}
