@@ -10,7 +10,7 @@
 .paymentTableTitle {
   display: flex;
   justify-content: center;
-  margin: 0px 0px 32px 0px;
+  margin: 0rem 0rem 3.2rem 0rem;
   font-size: 3.2rem;
 }
 
@@ -36,7 +36,7 @@
 
 .checkbox {
   display: flex;
-  margin: 3.2rem 3.2rem 0px 3.2rem;
+  margin: 3.2rem 3.2rem 0rem 3.2rem;
   cursor: pointer;
   width: 3.5rem;
   height: 3.5rem;
@@ -44,15 +44,15 @@
 
 .paymentMethod {
   cursor: pointer;
-  margin: 32px 32px 0px 32px;
+  margin: 3.2rem 3.2rem 0rem 3.2rem;
 }
 
 .Image {
-  margin: 32px 0px 0px 0px;
+  margin: 3.2rem 0rem 0rem 0rem;
 }
 
 .totalCart {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 400;
   padding-top: 4rem;
 }
@@ -62,7 +62,7 @@
   flex-direction: row;
   justify-content: center;
   margin-top: 4rem;
-  padding: 10px;
+  padding: 1rem;
 }
 
 .btnNext {
@@ -71,14 +71,14 @@
   align-items: center;
   font-weight: 400;
 
-  width: 220px;
-  height: 89px;
-  background: #610094;
+  width: 22rem;
+  height: 8.9rem;
+  background: rgba(62, 6, 95, 1);
 
   cursor: pointer;
   border: none;
-  padding: 16px;
-  font-size: 24px;
+  padding: 1.6rem;
+  font-size: 2.4rem;
   color: #fcfcfc;
 }
 
@@ -86,11 +86,66 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 220px;
-  height: 89px;
-  font-size: 24px;
+  width: 22rem;
+  height: 8.9rem;
+  font-size: 2.4rem;
   border: none;
   background-color: black;
   color: #fcfcfc;
   cursor: pointer;
+}
+
+@media screen and (max-width: 60rem) {
+  .checkbox {
+    margin: 0rem 3.2rem 0rem 3.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .Image {
+    margin: 0rem 0rem 0rem 0rem;
+  }
+
+  .li {
+    padding: 0;
+  }
+
+  .paymentTableTitle {
+    font-size: 1.8rem;
+  }
+
+  .paymentMethod {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    cursor: pointer;
+    margin: 1rem 3.2rem 1rem 3.2rem;
+    height: 5.8rem;
+    width: 18.2rem;
+    font-size: 1.8rem;
+  }
+
+  .divider {
+    width: 34rem;
+    margin-left: 2rem;
+  }
+
+  .totalCart {
+    font-size: 1.8rem;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem;
+    padding: 0;
+  }
+
+  .btnNext,
+  .btnBack {
+    margin-top: 2rem;
+    width: 17rem;
+    height: 5.8rem;
+    font-size: 1.8rem;
+  }
 }

@@ -7,33 +7,38 @@
 }
 .tableTitle,
 .pageTitle {
-  font-size: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 3.2rem;
   align-items: center;
 }
 
 .informationTable {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  margin: 50px;
-  border: #fcfcfc solid 1px;
-  border-radius: 15px;
-  width: 918px;
-  height: 374px;
+  padding-inline: 4rem;
+  padding-block: 4rem;
+  margin-top: 5rem;
+  border-radius: 1.5rem;
+  width: 91.8rem;
+  box-shadow: 0.5rem 0.5rem 0.4rem 0.2rem rgba(255, 255, 255, 0.1),
+    -0.5rem -0.5rem 0.4rem 0.2rem rgba(255, 255, 255, 0.1);
 }
 
 .informationList {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  padding: 30px 0 0 0;
+  padding-top: 1rem;
 }
 
 .informationListItem {
-  font-size: 24px;
+  font-size: 2.4rem;
   list-style: none;
-  padding: 10px;
+  padding: 1rem;
 }
 
 .buttonsContainer {
@@ -41,7 +46,7 @@
   flex-direction: row;
   justify-content: center;
   margin-top: 4rem;
-  padding: 10px;
+  padding: 1rem;
 }
 
 .btnNext {
@@ -51,13 +56,13 @@
   text-align: center;
   font-weight: 400;
 
-  width: 220px;
-  height: 89px;
-  background: #610094;
+  width: 22rem;
+  height: 8.9rem;
+  background: rgba(62, 6, 95, 1);
 
   cursor: pointer;
-  padding: 16px;
-  font-size: 24px;
+  padding: 1.6rem;
+  font-size: 2.4rem;
   color: #fcfcfc;
   border: none;
 }
@@ -66,41 +71,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 220px;
-  height: 89px;
-  font-size: 24px;
+  width: 22rem;
+  height: 8.9rem;
+  font-size: 2.4rem;
   color: #fcfcfc;
   background-color: black;
   cursor: pointer;
   border: none;
 }
 
-.successSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 4rem;
-}
+@media screen and (max-width: 60rem) {
+  .finalSection {
+    margin-top: 2rem;
+  }
+  .pageTitle {
+    font-size: 1.8rem;
+  }
 
-.pdfBox {
-  display: flex;
-  flex-direction: row;
-  width: 686px;
-  height: 67px;
-  justify-content: space-between;
-  align-items: center;
-  margin: 100px;
-  border: #fcfcfc solid 1px;
-  padding: 30px;
-  cursor: pointer;
-}
+  .informationTable {
+    width: 90%;
+    margin: 2rem;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+  }
 
-.successTitle {
-  font-size: 42px;
-  color: #8e05c2;
-}
+  .tableTitle {
+    font-size: 1.8rem;
+  }
 
-.successText {
-  font-size: 32px;
+  .informationListItem {
+    font-size: 1.6rem;
+  }
+
+  .buttonsContainer {
+    margin-top: 1.5rem;
+  }
+
+  .btnNext,
+  .btnBack {
+    margin-top: 0rem;
+    width: 13rem;
+    height: 5.8rem;
+    font-size: 1.8rem;
+  }
 }
