@@ -77,3 +77,30 @@
 }
   
 
+@media screen and (max-width: 43rem) {
+    .body{
+      width: 43rem;
+      display: flex;
+      align-items: center;
+    }
+    .title{
+      background-position: center;
+    }
+    .title h1 {
+      font-size: 6.4rem;
+    }
+
+    .QandA{
+      width: 100%;
+    }
+
+    .question{
+      font-size: 1.8rem;
+    }
+    .answer{
+      font-size: 1.6rem;
+    }
+    .vermais{
+       margin-left: 16.6rem;
+    }
+}
