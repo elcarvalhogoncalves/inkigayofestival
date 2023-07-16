@@ -1,26 +1,24 @@
 .container {
-    height: 100%;
-    width: 100%;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .title{
-    display: relative;
-    height: 24.9rem;
-    width: 100%;
-    background-image: url(../../../../public/imagens/títulos_coreanos/Line-up.svg);
-    background-repeat:no-repeat;
-    background-position-x: 7rem ;
-    background-position-y: 5rem ;
-    
-  
-  }
-  .title h1{
-    font-size: 6.4rem ;
-    margin-left: 5rem;
-    margin-top: 6.9rem ;
-    letter-spacing: .4rem ;
-  }
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: relative;
+  height: 24.9rem;
+  width: 100%;
+  background-image: url(../../../../public/imagens/títulos_coreanos/Line-up.svg);
+  background-repeat: no-repeat;
+  background-position-x: 7rem;
+  background-position-y: 5rem;
+}
+.title h1 {
+  font-size: 6.4rem;
+  margin-left: 5rem;
+  margin-top: 6.9rem;
+  letter-spacing: 0.4rem;
+}

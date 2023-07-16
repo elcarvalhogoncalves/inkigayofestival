@@ -42,12 +42,12 @@ export default function FAQ() {
       <section className={styles.conteiner} id="faq">
         <div className={styles.body}>
           <div className={styles.title}>
-            <h1>F.A.Q</h1>
+            <h1 className={styles.h1}>F.A.Q</h1>
           </div>
           <div className={styles.FAQ}>
             <div className={styles.QandA}>
               <div className={styles.question}>
-                <h2>
+                <h2 className={styles.h2}>
                   {" "}
                   O que é o{" "}
                   <span className={styles.colortext}>Festival Inkigayo?</span>
@@ -59,17 +59,19 @@ export default function FAQ() {
               {Q1 === true && (
                 <>
                   <div className={styles.answer}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    O Festival Inkigayo é uma celebração vibrante e emocionante
+                    da música coreana, que atrai entusiastas e fãs de K-pop de
+                    todo o Nordeste. Sendo reconhecido como o maior festival
+                    desse gênero na região. O Inkigayo reúne artistas talentosos
+                    e amantes da cultura coreana em uma experiência
+                    inesquecível.
                   </div>
                 </>
               )}
             </div>
             <div className={styles.QandA}>
               <div className={styles.question}>
-                <h2>
+                <h2 className={styles.h2}>
                   {" "}
                   Quando e Onde será o{" "}
                   <span className={styles.colortext}>Festival Inkigayo?</span>
@@ -91,7 +93,7 @@ export default function FAQ() {
             </div>
             <div className={styles.QandA}>
               <div className={styles.question}>
-                <h2>
+                <h2 className={styles.h2}>
                   {" "}
                   Quais serão as atrações do{" "}
                   <span className={styles.colortext}>Festival Inkigayo?</span>
