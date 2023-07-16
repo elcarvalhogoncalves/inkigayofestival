@@ -1,0 +1,224 @@
+.container {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 5rem;
+  background: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  display: relative;
+  height: 24.9rem;
+  width: 100%;
+  background-image: url(../../../../public/imagens/títulos_coreanos/Line-up.svg);
+  background-repeat:no-repeat;
+  background-position-x: 7rem ;
+  background-position-y: 5rem ;
+  
+
+}
+.title h1{
+  font-size: 6.4rem ;
+  margin-left: 5rem;
+  margin-top: 6.9rem ;
+  margin-bottom: 7rem ;
+  letter-spacing: .4rem ;
+}
+  
+.coreano{
+  display: absolute;
+  top: 0;
+}
+
+.body {
+  max-width: 128rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dias {
+  margin-bottom: 2.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 21.7rem;
+  border: none;
+  padding: 1.3rem;
+  background-color: transparent;
+  color: white;
+  filter: brightness(50%);
+  transition: .2s;
+}
+
+
+.date:hover {
+  filter: brightness(100%);
+
+}
+
+.date_choice{
+  border: 3px solid white;
+  text-decoration: underline;
+  filter: brightness(100%);
+}
+
+.date h1 {
+  font-size: 3.2rem;
+}
+
+.date p {
+  font-size: 2rem;
+}
+
+.cards {
+  justify-content: center;
+}
+
+.cards div {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  width: 1180px;
+  height: 161px;
+  text-align: center;
+  transition: .5s ease-in;
+  background-size: cover;
+  filter: brightness(80%);
+}
+
+.cards div:hover {
+  height: 50rem;
+  filter: brightness(100%);
+
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: .5s ease-out;
+  
+}
+.cards div h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-shadow: #000 .2rem .3rem 0.5rem;
+  font-size: 64px;
+  align-self: center;
+  filter: brightness(100%);
+}
+.cards div p {
+  display: none;
+  width: 100%;
+  font-size: 24px;
+  background: #270036bb;
+  transition: .3s ease-in;
+}
+.cards div:hover p {
+  display: flex;
+  align-items: center;
+  text-shadow: #000 .2rem .3rem 0.5rem;
+  padding-block: 2rem;
+  justify-content: center;
+  font-weight: 300;
+  transition: .3s ease-out;
+}
+
+.aespa {
+  background-image: url(../../../../public/imagens/line_up/Aespa.jpg);
+  background-position: center 33%;
+}
+
+.Psy {
+  background-image: url(../../../../public/imagens/line_up/psy.jpg);
+}
+
+.EXO {
+  background-image: url(../../../../public/imagens/line_up/EXO.jpg);
+  background-position: center 25%;
+}
+
+.Twice {
+  background-image: url(../../../../public/imagens/line_up/Twice.webp);
+  background-position: center 20%;
+}
+
+.Jungkook {
+  background-image: url(../../../../public/imagens/line_up/Jungkook.webp);
+  background-position: center 28%;
+}
+
+.Loona {
+  background-image: url(../../../../public/imagens/line_up/Loona.webp);
+  background-position: center 28%;
+}
+
+.BTS {
+  background-image: url(../../../../public/imagens/line_up/BTS-GETTY.jpg);
+  background-position: center 28%;
+}
+
+.BP {
+  background-image: url(../../../../public/imagens/line_up/blackpink.jpg);
+  background-position: center 19%;
+}
+
+.IU {
+  background-image: url(../../../../public/imagens/line_up/IU.webp);
+  background-position: center 33%;
+}
+
+.card-body {
+  align-items: center;
+}
+
+.card h2 {
+  align-items: center;
+}
+
+
+@media screen and (max-width: 770px) {
+ 
+  .title{
+    background-position: center;
+    }
+    .body{
+      max-width: 43rem ;
+    }
+    .date{
+      width: 10.7rem;
+    }
+
+    .date h1{
+      font-size: 1.6rem;
+    }
+
+    .date p{
+      font-size: 1.2rem ;
+    }
+    
+    .cards div{
+      width: 38rem ;
+      height: 14rem;
+    }
+    .cards div:hover{
+      height: 25rem ;
+    }
+    .cards div p{
+      font-size: 1.4rem;
+    }
+
+    }
+  
+  

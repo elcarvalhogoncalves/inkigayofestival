@@ -13,6 +13,7 @@
     list-style: none;
 }
 
+
 .bottom_gradient{
     position: absolute;
     display: flex;
@@ -22,6 +23,37 @@
     width: 100vw;
     padding: 6rem 6.7rem;
     background: linear-gradient(to bottom, transparent 50%, #000 96% , #000 100%);
+}
+
+@keyframes sequencia_mobile {
+    0%{
+        background: url('../../../../public/imagens/background-home/mobile/animation1.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /* 35%{
+        background: url('../../../../public/imagens/background-home/animation2.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    68%{
+        background: url('../../../../public/imagens/background-home/animation1.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    } */
+
+    100%{
+        background: url('../../../../public/imagens/background-home/mobile/animation1.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
 }
 
 @keyframes sequencia {
@@ -53,4 +85,17 @@
         background-position: center;
     }
 
+}
+
+
+@media screen and (max-width: 770px) {
+    .bottom_gradient{
+        justify-content: center;
+    }
+    .social_medias{
+        align-items: center;
+    }
+    .container{
+        animation: sequencia_mobile 57s infinite;
+    }
 }

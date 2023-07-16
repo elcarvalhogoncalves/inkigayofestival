@@ -1,0 +1,164 @@
+.registro_main{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.registro_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    background: url('../../../../public/imagens/logoW.svg') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    width: 11.5rem;
+    height: 11rem;
+    margin-top: 3.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.title{
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: start;
+    font-size: 6.4rem;
+    align-self: flex-start;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input{
+    background-color: #FFF;
+    width: 90rem;
+    height: 7.5rem;
+    padding-inline: 3.3rem;
+    border-radius: 1.5rem;
+    border: none;
+    outline: .3 solid #8E05C2;
+
+    color: #747474;
+    font-size: 2.4rem;
+}
+
+.input::placeholder{
+    color: #747474;
+    font-size: 2.4rem;
+}
+
+.error{
+    background-color: #ffb1b1;
+}
+.error::placeholder{
+    color: rgb(54, 0, 0);
+}
+
+
+.forgot{
+    color: #FFF;
+    font-size: 2.4rem;
+    align-self: flex-end;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.create{
+    width: 19.5rem;
+    height: 6.4rem; 
+    background-color: #3E065F;
+    font-size: 2.4rem;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    border: 0;
+    margin-top: 1rem;
+    margin-bottom: 2.6rem;
+}
+
+.login_span{
+    text-decoration: underline;
+}
+
+.login_link{
+    color: #FFF;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-block: 2.4rem;   
+}
+
+.error_span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .2rem solid rgb(117, 0, 0);
+    background-color: rgb(170, 0, 0);
+
+    padding: 1.6rem;
+    width: 100%;
+}
+
+
+.password{
+    position: relative;
+}
+.cpassword{
+    position: relative;
+}
+.eye{
+    display:inline-flex;
+    position: absolute;	
+    font-size: 3.4rem;
+    color: rgb(0, 0, 0, .4);
+    right: 2rem;
+    top: 2rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.eye:hover{
+    color: rgb(0, 0, 0, .7);
+}
+
+@media screen and (max-width: 900px) {
+    .login_section{
+        gap: 2.5rem;
+    }
+    .title{
+        align-self: center;
+    }
+    .form{
+        gap : 4.4rem;
+    }
+    .input{
+        width: 38rem; 
+    }
+    .fieldset{
+        border: 0;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+    }
+    .footer{
+        margin-block: 4.4rem;   
+    }
+}

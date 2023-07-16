@@ -1,0 +1,284 @@
+.main{
+  padding-bottom: 8rem;
+}
+
+.cardsDays {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  padding-top: 3.88rem;
+}
+
+.cardsDaysList {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 11rem;
+}
+
+.cardsDaysItem {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 21rem;
+  height: 9.9rem;
+  flex-shrink: 0;
+  background: #d9d9d9;
+  color: #000000;
+  cursor: pointer;
+}
+
+.tableInfomationIngresso {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  width: 100rem;
+}
+
+.daystitle {
+  text-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.datetitle {
+  text-align: center;
+  text-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sectionIngresso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7.31rem;
+  height: 100vh;
+  background: #000000;
+}
+
+.selected {
+  background-color: #3e065f;
+  color: #d9d9d9;
+}
+
+.tableTitles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: center;
+  padding: 2.4rem;
+}
+
+.tableItensList {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  padding: 2.4rem;
+}
+
+.titleTable {
+  width: 20rem;
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 3.84rem;
+  list-style: none;
+}
+
+.td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  font-size: 2.4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.buttonAddSubtract {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  justify-content: center;
+}
+
+.workTime {
+  margin: 0 3.2rem 0 3.2rem;
+  display: relative;
+  margin-top: 1.5rem;
+  font-size: 2.4rem;
+  width: 2rem;
+}
+
+.btnMinus,
+.btnPlus {
+  display: relative;
+  margin-top: 1.3rem;
+
+  width: 4.1rem;
+  height: 4.1rem;
+
+  cursor: pointer;
+
+  background-color: black;
+  color: #610094;
+  border-radius: 50%;
+  border: #610094 0.3rem solid;
+
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.totalCart {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 3.84rem;
+  padding-top: 4rem;
+}
+
+.btnNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  margin-top: 4rem;
+
+  width: 22rem;
+  height: 8.9rem;
+  background: rgba(62, 6, 95, 1);
+
+  cursor: pointer;
+  padding: 1.6rem;
+  font-size: 2.4rem;
+  color: #fcfcfc;
+  border: none;
+}
+
+.imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6rem;
+}
+
+.imagemArena {
+  width: 58rem;
+  height: 67.8rem;
+}
+
+@media screen and (max-width: 60rem) {
+  .cardsDays {
+    margin-top: 1rem;
+  }
+
+  .cardsDaysList {
+    gap: 1.5rem;
+  }
+
+  .cardsDaysItem {
+    width: 11rem;
+    height: 5.5rem;
+  }
+
+  .daystitle {
+    font-size: 1.6rem;
+  }
+
+  .datetitle {
+    font-size: 1.4rem;
+    padding-top: 1rem;
+  }
+
+  .sectionIngresso {
+    margin: 1rem;
+    height: 0%;
+  }
+
+  .tableTitles {
+    padding: 0rem;
+    margin: 2rem;
+  }
+
+  .tableItensList {
+    padding: 0rem;
+    margin: 1rem;
+    width: 34rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .titleTable {
+    width: 10.1rem;
+    height: 1.9rem;
+    font-size: 1.6rem;
+  }
+
+  .td {
+    width: 9.8rem;
+    height: 3.8rem;
+    font-size: 1.6rem;
+    margin-left: 1.2rem;
+  }
+
+  .workTime {
+    margin: 1.6rem;
+    font-size: 1.4rem;
+    width: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .buttonAddSubtract {
+    width: 0;
+    display: relative;
+    margin: -0.5rem -12rem 0rem 0rem;
+  }
+
+  .btnMinus,
+  .btnPlus {
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  .divider {
+    width: 36rem;
+  }
+
+  .totalCart {
+    padding-top: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .btnNext {
+    margin-top: 2rem;
+    width: 13rem;
+    height: 5.8rem;
+    font-size: 1.8rem;
+  }
+
+  .imagem {
+    margin-top: 0rem;
+  }
+
+  .imagemArena {
+    width: 23.2rem;
+    height: 27.1rem;
+    margin: 2rem;
+  }
+}

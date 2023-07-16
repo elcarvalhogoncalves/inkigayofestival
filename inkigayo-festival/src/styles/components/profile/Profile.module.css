@@ -1,0 +1,100 @@
+.profile_main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.profile_section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 16rem;
+    width: calc(80% - 15px);
+    max-width: calc(80% - 15px);
+    padding-bottom: 9rem;
+}
+.profile_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.profile_name{
+    font-size: 3.8rem;
+}
+.profile_name_details{
+    font-size: 2.4rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.line{
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 3.2rem;
+
+}
+
+.ticket{
+    display: flex;
+    width: 100%;
+    padding-inline: 2rem;
+    padding-block: 2.5rem;
+    border: .5rem solid rgba(255, 255, 255, 0.3);
+    border-radius: 1.5rem;
+    gap : 2rem;
+    align-items: center;
+}
+
+.qr_code{
+    width: 24rem;
+    height: 24rem;
+    background-color: aqua;
+    user-select: none;
+    pointer-events: none;
+}
+.ticket_info{
+    width: 100%;
+    font-size: 3.2rem ;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+.ticket_info p{
+    font-size: 2.4rem;
+    word-break: break-all;
+
+}
+.ticket_info_box{
+    display: flex;
+    justify-content: space-between;
+}
+.profile_tickets{
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 3rem;
+    align-items: center;
+}
+.ticket_nothing{
+    display: flex;
+    padding-block: 5rem;
+    justify-content: center;
+    font-size: 3.2rem;
+    text-align: center;
+}
+@media screen and (max-width: 835px) {
+    .profile_main{
+        font-size: 62.5%; /* 1rem = 10px */
+    }      
+    .profile_section{
+        margin-top: 22rem;
+    }
+    .profile_div{
+        align-items: center;
+        flex-direction: column;
+    }
+    .ticket{
+        flex-direction: column;
+    }
+}
