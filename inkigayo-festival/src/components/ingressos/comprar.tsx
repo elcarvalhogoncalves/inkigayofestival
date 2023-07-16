@@ -293,7 +293,6 @@ export default function IngressoCompras({
       handleAvancar();
     }
   }
-  console.log(cart);
   return (
     <>
       <section className={styles.cardsDays}>
@@ -338,9 +337,9 @@ export default function IngressoCompras({
           {selectedDay === "sexta" &&
             // const dayTable = resultAPI[0].tickets;
             resultAPI[0].tickets.map((ticket, index) => (
-              <>
-                <hr className={styles.divider} />
-                <ul className={styles.tableItensList} key={index}>
+              <div key={index}>
+                <hr className={styles.divider} key={index}/>
+                <ul className={styles.tableItensList} >
                   <li className={styles.td}>{ticket.nome}</li>
                   <li className={styles.td}>R$ {ticket.preco}</li>
                   <li className={styles.buttonAddSubtract}>
@@ -372,12 +371,12 @@ export default function IngressoCompras({
                     </div>
                   </li>
                 </ul>
-              </>
+              </div>
             ))}
 
           {selectedDay === "sabado" &&
             resultAPI[1].tickets.map((ticket, index) => (
-              <>
+              <div key={index}>
                 <hr className={styles.divider} />
                 <ul className={styles.tableItensList} key={index}>
                   <li className={styles.td}>{ticket.nome}</li>
@@ -411,12 +410,12 @@ export default function IngressoCompras({
                     </div>
                   </li>
                 </ul>
-              </>
+              </div>
             ))}
 
           {selectedDay === "domingo" &&
             resultAPI[2].tickets.map((ticket, index) => (
-              <>
+              <div key={index}>
                 <hr className={styles.divider} />
                 <ul className={styles.tableItensList} key={index}>
                   <li className={styles.td}>{ticket.nome}</li>
@@ -450,7 +449,7 @@ export default function IngressoCompras({
                     </div>
                   </li>
                 </ul>
-              </>
+              </div>
             ))}
         </div>
         <span className={styles.totalCart}>
