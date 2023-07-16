@@ -158,3 +158,41 @@
 .card h2 {
   align-items: center;
 }
+
+
+@media screen and (max-width: 600px) {
+ 
+  .title{
+    background-position: center;
+    }
+    .body{
+      max-width: 43rem ;
+      margin-left: 7.5rem;
+    }
+    .date{
+      height: 4rem;
+      width: 10.7rem;
+    }
+
+    .date h1{
+      font-size: 2rem;
+    }
+
+    .date p{
+      font-size: 1.6rem ;
+    }
+    
+    .cards div{
+      width: 38rem ;
+      height: 14rem;
+    }
+    .cards div:hover{
+      height: 25rem ;
+    }
+    .cards div p{
+      font-size: 1.4rem;
+    }
+
+    }
+  
+  
