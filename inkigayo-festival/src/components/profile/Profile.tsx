@@ -61,7 +61,7 @@ export default function Profile() {
                 <section className={styles.profile_tickets}>
                 {tickets.map((ticket) => (
                         <article key={ticket.id} className={styles.ticket}>
-                            <Image src={`http://qrickit.com/api/qr.php?d=${ticket.id}&addtext=Inkigayo+Festival&txtcolor=8E05C2&fgdcolor=8E05C2&bgdcolor=000000&qrsize=240&t=p&e=m`} width={240} height={240} alt="Qr code" />
+                            <Image src={`http://qrickit.com/api/qr.php?d=${ticket.id}&addtext=Inkigayo+Festival&txtcolor=8E05C2&fgdcolor=8E05C2&bgdcolor=000000&qrsize=240&t=p&e=m`} width={200} height={200} alt="Qr code" />
                             <div className={styles.ticket_info}>
                                 <span className={styles.ticket_info_box}>
                                     <p className={styles.ticket_info_name}>{ticket.nome}</p>
