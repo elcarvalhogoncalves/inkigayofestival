@@ -29,6 +29,7 @@
   background-position-x: 15rem;
   background-position-y: 5rem;
 }
+
 .title h1 {
   font-size: 6.4rem;
   margin-left: 5rem;
@@ -40,7 +41,7 @@
 .QandA {
   box-sizing: border-box;
   max-width: 113.4rem;
-  
+
   border-bottom: 2px solid white;
 }
 .question {
