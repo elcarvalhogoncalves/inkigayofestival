@@ -1,0 +1,223 @@
+.container{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.h1 {
+  font-size: 3.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.h2 {
+  font-size: 2.4rem;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin-top: 4.3rem;
+  padding-left: 2rem;
+}
+
+.input {
+  width: 58rem;
+  height: 6.7rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  font-size: 2rem;
+  padding-left: 2.5rem;
+  border: none;
+}
+
+.buttonEnviar {
+  width: 20.1rem;
+  background-color: rgba(62, 6, 95, 0.5);
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  font-size: 2.4rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.bottom {
+  height: 26rem;
+  background-color: rgba(62, 6, 95, 0.5);
+  margin-top: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconLine {
+  max-width: 78rem;
+  height: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5.5rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+}
+
+.infos {
+  height: 7.2rem;
+  width: 65.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.p {
+  margin-bottom: 2.8rem;
+  font-size: 1.8rem;
+}
+
+.twitter{
+  background-image: url(../../../../public/imagens/social-media/twitter.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 45.833px;
+}
+.instagram{
+  background-image: url(../../../../public/imagens/social-media/instagram.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 55px;
+}
+.youtube{
+  background-image: url(../../../../public/imagens/social-media/youtube.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 38.5px;
+}
+.spotify{
+  background-image: url(../../../../public/imagens/social-media/spotify.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 55px;
+}
+.facebook{
+  background-image: url(../../../../public/imagens/social-media/facebook.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 55px;
+}
+.tiktok{
+  background-image: url(../../../../public/imagens/social-media/tiktok.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 55px;
+  min-height: 55px;
+}
+
+@media screen and (max-width: 770px) {
+  .up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+  }
+
+  .h1 {
+    font-size: 2.4rem;
+  }
+
+  .h2 {
+    font-size: 1.8rem;
+  }
+  .iconLine {
+    gap: 25px;
+  }
+
+
+  .twitter{
+    min-width: 27px;
+    min-height: 22px;
+  }
+  .instagram{
+    min-width: 27px;
+    min-height: 27px;
+  }
+  .youtube{
+    min-width: 27px;
+    min-height: 19px;
+  }
+  .spotify{
+    min-width: 27px;
+    min-height: 27px;
+  }
+  .facebook{
+    min-width: 27px;
+    min-height: 27px;
+  }
+  .tiktok{
+    min-width: 27px;
+    min-height: 27px;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 4.3rem;
+    padding-left: 2rem;
+    
+  }
+
+  .bottom{
+    margin-top: 0rem;
+  }
+
+
+  .input {
+    max-width: 29.2rem;
+    height: 3.4rem;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+  }
+
+  .buttonEnviar {
+    width: 9.5rem;
+    font-size: 1.6rem;
+    padding-block: 1.5rem;
+    border-radius: 0px;
+  }
+
+  .infos {
+    width: 34.7rem;
+    height: 4.2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .p {
+    font-size: 0.8rem;
+  }
+}
