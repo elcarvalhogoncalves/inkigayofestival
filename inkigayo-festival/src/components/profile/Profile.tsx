@@ -76,9 +76,9 @@ export default function Profile() {
 
                             </div>
                         </article>
-                ))
-            }
-            </section>
+                        ))
+                    }
+                    </section>
 
                 {/* <section className={styles.ticket}>
                     <Image src={`http://qrickit.com/api/qr.php?d=378493c8-8cc8-4667-8bb4-fbdfe9480df4&addtext=Inkigayo+Festival&txtcolor=8E05C2&fgdcolor=8E05C2&bgdcolor=000000&qrsize=240&t=p&e=m`} width={240} height={240} alt="Qr code" />
