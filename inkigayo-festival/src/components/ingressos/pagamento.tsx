@@ -26,6 +26,7 @@ export default function IngressoPagamento({
   }
 
   return (
+    
     <section className={styles.paymentSection}>
       <div className={styles.paymentTable}>
         <ul className={styles.titleSection}>

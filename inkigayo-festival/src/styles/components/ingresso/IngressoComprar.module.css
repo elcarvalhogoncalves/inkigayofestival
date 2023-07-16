@@ -1,3 +1,7 @@
+.main{
+  padding-bottom: 8rem;
+}
+
 .cardsDays {
   display: flex;
   justify-content: center;

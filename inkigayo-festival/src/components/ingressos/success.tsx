@@ -1,8 +1,12 @@
 "use client";
 import styles from "@/styles/components/ingresso/IngressoSuccess.module.css";
 import Image from "next/image";
+import Link from "next/link";
+
+
 
 export default function Sucesso() {
+ 
   return (
     <main className={styles.main}>
       <section className={styles.successSection}>
@@ -19,7 +23,9 @@ export default function Sucesso() {
             height={40}
           />
         </div>
-        <button className={styles.btnFinish}>VER MEUS INGRESSOS</button>
+        <Link href={"../meus-ingressos"}>
+          <button className={styles.btnFinish}>VER MEUS INGRESSOS</button>
+        </Link>
       </section>
     </main>
   );

@@ -1,7 +1,22 @@
 "use client";
+import Loading from "@/app/loading";
 import styles from "@/styles/components/ingresso/IngressoComprar.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+
+interface IAPI {
+  id: number;
+  dia: string;
+  tickets: TTicket[];
+}
+
+interface typeTicket{
+  dia: string;
+  nome: string;
+  preco: number;
+  quantidade: number;
+}
 
 interface Cart {
   name: string;
@@ -9,6 +24,8 @@ interface Cart {
   quantity: number;
   metodoPagamento: string;
   tiposIngresso: string;
+  userEmail: string;
+  cart: typeTicket[];
 }
 
 type TTicket = {
@@ -42,74 +59,90 @@ export default function IngressoCompras({
   objectCart,
 }: Props) {
   const [cart, setCart] = useState<TTicketWDate[]>([]);
+  const [ticketCart, setTicketCart] = useState<typeTicket[]>([]);
 
   const [selectedDay, setSelectedDay] = useState<string>("sexta");
 
-  const resultAPI = [
-    {
-      id: 1,
-      dia: "sexta",
-      tickets: [
-        {
-          nome: "Arena Pista (Inteira)",
-          preco: 459,
-          quantidade: 7500,
-        },
-        {
-          nome: "Arena Pista (Meia-Entrada)",
-          preco: 229,
-          quantidade: 2500,
-        },
-        {
-          nome: "Camarote VIP",
-          preco: 669,
-          quantidade: 5000,
-        },
-      ],
-    },
-    {
-      id: 2,
-      dia: "sabado",
-      tickets: [
-        {
-          nome: "Arena Pista (Inteira)",
-          preco: 259,
-          quantidade: 7500,
-        },
-        {
-          nome: "Arena Pista (Meia-Entrada)",
-          preco: 329,
-          quantidade: 2500,
-        },
-        {
-          nome: "Camarote VIP",
-          preco: 769,
-          quantidade: 5000,
-        },
-      ],
-    },
-    {
-      id: 3,
-      dia: "sexta",
-      tickets: [
-        {
-          nome: "Arena Pista (Inteira)",
-          preco: 659,
-          quantidade: 7500,
-        },
-        {
-          nome: "Arena Pista (Meia-Entrada)",
-          preco: 429,
-          quantidade: 2500,
-        },
-        {
-          nome: "Camarote VIP",
-          preco: 869,
-          quantidade: 5000,
-        },
-      ],
-    },
-  ];
+  const [resultAPI, setResultAPI] = useState<IAPI[]>([]);
+  const [isLoading, setLoading] = useState(false)
+ 
+  useEffect(() => {
+    setLoading(true)
+    fetch('./api/event')
+      .then((res) => res.json())
+      .then((data) => {
+        setResultAPI(data)
+        setLoading(false)
+      })
+  }, [])
+
+
+
+  // const resultAPI = [
+  //   {
+  //     id: 1,
+  //     dia: "sexta",
+  //     tickets: [
+  //       {
+  //         nome: "Arena Pista (Inteira)",
+  //         preco: 459,
+  //         quantidade: 7500,
+  //       },
+  //       {
+  //         nome: "Arena Pista (Meia-Entrada)",
+  //         preco: 229,
+  //         quantidade: 2500,
+  //       },
+  //       {
+  //         nome: "Camarote VIP",
+  //         preco: 669,
+  //         quantidade: 5000,
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     dia: "sabado",
+  //     tickets: [
+  //       {
+  //         nome: "Arena Pista (Inteira)",
+  //         preco: 259,
+  //         quantidade: 7500,
+  //       },
+  //       {
+  //         nome: "Arena Pista (Meia-Entrada)",
+  //         preco: 329,
+  //         quantidade: 2500,
+  //       },
+  //       {
+  //         nome: "Camarote VIP",
+  //         preco: 769,
+  //         quantidade: 5000,
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 3,
+  //     dia: "sexta",
+  //     tickets: [
+  //       {
+  //         nome: "Arena Pista (Inteira)",
+  //         preco: 659,
+  //         quantidade: 7500,
+  //       },
+  //       {
+  //         nome: "Arena Pista (Meia-Entrada)",
+  //         preco: 429,
+  //         quantidade: 2500,
+  //       },
+  //       {
+  //         nome: "Camarote VIP",
+  //         preco: 869,
+  //         quantidade: 5000,
+  //       },
+  //     ],
+  //   },
+  // ];
 
   const prices: IDays = {
     sexta: [
@@ -135,6 +168,50 @@ export default function IngressoCompras({
   ]);
   const [quantitiesSunday, setQuantitiesSunday] = useState<number[]>([0, 0, 0]);
 
+
+  function AddTicketCart(objeto, array) {
+    const index = array.findIndex((item) => item.nome === objeto.nome && item.dia === objeto.dia);
+  
+    if (index === -1) {
+      // O objeto não está presente na array, então adicionamos o objeto à array
+      array.push(objeto);
+    } else {
+      // O objeto está presente na array, então incrementamos a propriedade "quantidade" em 1
+      array[index].quantidade++;
+    }
+  
+    return array;
+  }
+  
+  function DelTicketCart(objeto, array) {
+    const index = array.findIndex((item) => item.nome === objeto.nome && item.dia === objeto.dia);
+  
+    if (index !== -1) {
+      if (array[index].quantidade > 1) {
+        array[index].quantidade--;
+      } else {
+        array.splice(index, 1);
+      }
+    }
+  
+    return array;
+  }
+  
+  function DelCartInfo(array, objeto, string) {
+    const index = array.findIndex((item) => item.nome === objeto.nome && item.dia === string);
+  
+    if (index !== -1) {
+      array.splice(index, 1);
+    }
+  
+    return array;
+  
+  }
+
+
+
+
+
   function handleAddQuantityFriday(index: number, ticket: TTicket) {
     const twd = {
       nome: ticket.nome,
@@ -142,7 +219,42 @@ export default function IngressoCompras({
       dia: "sexta",
     } as TTicketWDate;
 
+    const tCart = {
+      dia: "sexta",
+      nome: ticket.nome,
+      preco: ticket.preco,
+      quantidade: 1,
+    } as typeTicket;
+
+    setTicketCart(AddTicketCart(tCart, ticketCart));
+
+
+    // const aux = ticketCart.findIndex((ingresso) => ingresso.nome === ticket.nome && ingresso.dia === "sexta");
+
+    // if (aux !== -1) {
+    //   ticketCart[aux].quantidade += 1;
+    // } else {
+    //   setTicketCart(ticketCart.concat(tCart));
+    // }
+    
+    // ticketCart.map((ingresso) => {
+    //   if (ingresso.nome === ticket.nome && ingresso.dia === "sexta") {
+    //     ingresso.quantidade += 1;
+    //   }
+    // });
+
+    // for(let i = 0; i < ticketCart.length; i++) {
+    //   if (ticketCart[i].nome === ticket.nome && ticketCart[i].dia === "sexta") {
+    //     ticketCart[i].quantidade += 1;
+    //   } else {
+    //     setTicketCart(ticketCart.concat(tCart));
+    //     console.log(ticketCart);
+    //   }
+    // }
+    // const newTicketCart = [...ticketCart];
+
     setCart(cart.concat(twd));
+
     const updatedQuantities = [...quantitiesFriday];
     const totalSelected = updatedQuantities.reduce(
       (total, quantity) => total + quantity,
@@ -154,10 +266,46 @@ export default function IngressoCompras({
       setQuantitiesFriday(updatedQuantities);
     }
   }
+  
 
   function handleSubtractQuantityFriday(index: number, ticket: TTicket) {
-    const newCart = cart.filter((ingresso) => ingresso.nome !== ticket.nome);
-    setCart(newCart);
+    // const newCart = cart.filter((ingresso) => ingresso.nome !== ticket.nome && ingresso.dia !== "sexta");
+    setCart(DelCartInfo(cart, ticket, "sexta"));
+
+    const tCart = {
+      dia: "sexta",
+      nome: ticket.nome,
+      preco: ticket.preco,
+      quantidade: 1,
+    } as typeTicket;
+
+    setTicketCart(DelTicketCart(tCart, ticketCart));
+
+
+    // const aux = ticketCart.findIndex((ingresso) => ingresso.nome === ticket.nome && ingresso.dia === "sexta");
+
+    // if (aux !== -1 && ticketCart[aux].quantidade > 1) {
+    //   ticketCart[aux].quantidade -= 1;
+    // } else if(aux !== -1 && ticketCart[aux].quantidade === 1) {
+    //   const newTCart = ticketCart.filter(
+    //     (ingresso) => ingresso.nome !== ticket.nome && ingresso.dia !== "sexta"
+    //   );
+    //   setTicketCart(newTCart);
+    // }
+
+    // for(let i = 0; i < ticketCart.length; i++) {
+    //   if (ticketCart[i].nome === ticket.nome && ticketCart[i].dia === "sexta" && ticketCart[i].quantidade > 1) {
+    //     ticketCart[i].quantidade -= 1;
+    //   } else if(ticketCart[i].nome === ticket.nome && ticketCart[i].dia === "sexta") {
+    //     const newTCart = ticketCart.filter(
+    //       (ingresso) => ingresso.nome !== ticket.nome
+    //     );
+    //     setTicketCart(newTCart);
+        
+    //   }
+    // }
+
+    
 
     const updatedQuantities = [...quantitiesFriday];
     if (updatedQuantities[index] > 0) {
@@ -172,6 +320,18 @@ export default function IngressoCompras({
       preco: ticket.preco,
       dia: "sabado",
     } as TTicketWDate;
+
+
+    const tCart = {
+      dia: "sabado",
+      nome: ticket.nome,
+      preco: ticket.preco,
+      quantidade: 1,
+    } as typeTicket;
+
+    setTicketCart(AddTicketCart(tCart, ticketCart));
+
+
 
     setCart(cart.concat(twd));
 
@@ -188,8 +348,30 @@ export default function IngressoCompras({
   }
 
   function handleSubtractQuantitySaturday(index: number, ticket: TTicket) {
-    const newCart = cart.filter((ingresso) => ingresso.nome !== ticket.nome);
-    setCart(newCart);
+    // const newCart = cart.filter((ingresso) => ingresso.nome !== ticket.nome && ingresso.dia !== "sabado");
+    setCart(DelCartInfo(cart, ticket, "sabado"));
+
+
+    const tCart = {
+      dia: "sabado",
+      nome: ticket.nome,
+      preco: ticket.preco,
+      quantidade: 1,
+    } as typeTicket;
+
+    setTicketCart(DelTicketCart(tCart, ticketCart));
+
+    // const aux = ticketCart.findIndex((ingresso) => ingresso.nome === ticket.nome && ingresso.dia === "sexta");
+
+    // if (aux !== -1 && ticketCart[aux].quantidade > 1) {
+    //   ticketCart[aux].quantidade -= 1;
+    // } else if(aux !== -1 && ticketCart[aux].quantidade === 1) {
+    //   const newTCart = ticketCart.filter(
+    //     (ingresso) => ingresso.nome !== ticket.nome && ingresso.dia !== "sabado"
+    //   );
+    //   setTicketCart(newTCart);
+    // }
+
 
     const updatedQuantities = [...quantitiesSaturday];
 
@@ -206,6 +388,17 @@ export default function IngressoCompras({
       dia: "domingo",
     } as TTicketWDate;
 
+
+    const tCart = {
+      dia: "domingo",
+      nome: ticket.nome,
+      preco: ticket.preco,
+      quantidade: 1,
+    }
+
+
+    setTicketCart(AddTicketCart(tCart, ticketCart));
+
     setCart(cart.concat(twd));
 
     const updatedQuantities = [...quantitiesSunday];
@@ -221,8 +414,30 @@ export default function IngressoCompras({
   }
 
   function handleSubtractQuantitySunday(index: number, ticket: TTicket) {
-    const newCart = cart.filter((ingresso) => ingresso.nome !== ticket.nome);
-    setCart(newCart);
+    // const newCart = cart.filter((ingresso) => ingresso.nome !== ticket.nome && ingresso.dia !== "domingo");
+    setCart(DelCartInfo(cart, ticket, "domingo"));
+
+
+    const tCart = {
+      dia: "domingo",
+      nome: ticket.nome,
+      preco: ticket.preco,
+      quantidade: 1,
+    } as typeTicket;
+
+    setTicketCart(DelTicketCart(tCart, ticketCart));
+
+    // const aux = ticketCart.findIndex((ingresso) => ingresso.nome === ticket.nome && ingresso.dia === "sexta");
+
+    // if (aux !== -1 && ticketCart[aux].quantidade > 1) {
+    //   ticketCart[aux].quantidade -= 1;
+    // } else if(aux !== -1 && ticketCart[aux].quantidade === 1) {
+    //   const newTCart = ticketCart.filter(
+    //     (ingresso) => ingresso.nome !== ticket.nome && ingresso.dia !== "domingo"
+    //   );
+    //   setTicketCart(newTCart);
+    // }
+
 
     const updatedQuantities = [...quantitiesSunday];
 
@@ -269,22 +484,27 @@ export default function IngressoCompras({
   }
 
   function handleA() {
+    // console.log(cart);
     const typeTickets: string[] = [];
     for (let i = 0; i < cart.length; i++) {
       typeTickets.push(cart[i].nome + " " + "(" + cart[i].dia + ")");
     }
+    // console.log(typeTickets);
     const arrayTypes = Array.from(new Set(typeTickets));
     let typesConcat = "";
     for (let i = 0; i < arrayTypes.length; i++) {
       typesConcat = typesConcat + arrayTypes[i];
       if (i < arrayTypes.length - 1) typesConcat = typesConcat + ", ";
     }
+    // console.log(typesConcat);
     const objetoCart: Cart = {
-      name: "Poliana",
+      name: "",
       total: calculateTotal(),
       quantity: cart.length,
       metodoPagamento: "",
       tiposIngresso: typesConcat,
+      userEmail: "",
+      cart: ticketCart,
     };
 
     objectCart(objetoCart);
@@ -293,8 +513,12 @@ export default function IngressoCompras({
       handleAvancar();
     }
   }
+
+  if(isLoading) return <Loading />
+  if(resultAPI.length === 0) return <Loading />;
+
   return (
-    <>
+    <main className={styles.main}>
       <section className={styles.cardsDays}>
         <ul className={styles.cardsDaysList}>
           <li
@@ -470,6 +694,6 @@ export default function IngressoCompras({
           alt="Mapa da Arena Fonte Nova"
         />
       </div>
-    </>
+    </main>
   );
 }
