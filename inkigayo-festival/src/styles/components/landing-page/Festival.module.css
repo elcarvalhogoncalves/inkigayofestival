@@ -42,6 +42,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 7.5rem;
+  height: 80rem;
 }
 
 .desc {
@@ -83,7 +84,7 @@
   width: 100rem;
   height: 80rem;
   background-image: url("../../../../public/imagens/festival.svg");
-  background-size: cover;
+  background-size: 30% ;
   background-repeat: no-repeat;
   background-position: 70% 20%;
 }
@@ -92,30 +93,57 @@
  
   .title{
     background-position: center;
+    margin: 6.9rem 0 0 0;
+    height: 23.3rem;
   }
+  .title h1{
+    margin-left: 2.5rem;
+    margin-top: 5rem ;    
+ }
   .body{
-    background-image: url("../../../../public/imagens/festival.svg");
+    background-image: url("../../../../public/imagens/Background-Mobile.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:auto;
     background-position: center;
+    height: 98rem;
+
   } 
+  .texto{
+    justify-content: space-between;
+    width: 43rem;
+    height: 98rem;
+    margin: 0 0 0 0;
+  }
   
   .desc{
     text-align: center;
-    font-size: 1.8rem;
-    width: 32rem;
+    font-size: 2rem;
+    width: 35rem;
     height: 31.5rem;
+    margin-top: 3.5rem;
+    margin-left: 4rem;
+    line-height: 3.5rem;
+  }
+  .quote{
+    margin-top: 6.4rem;
+    margin-left: 0;
+    margin-right: 0;
+    background-position-x: 18rem ;
+
   }
   .frase{
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+    width: 43rem;
+    line-height: 3.1rem;
   } 
   .autor{
-    text-align: center;
-    font-size: 1.8rem;
+    font-size: 2.6rem;
+    margin-top: 3.2rem;
   }
   .image{
-    display: none;
+    width: 0;
+    height: 0;
   }
 }
 
