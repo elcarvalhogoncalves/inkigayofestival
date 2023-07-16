@@ -453,7 +453,6 @@ export default function IngressoCompras({
               </>
             ))}
         </div>
-
         <span className={styles.totalCart}>
           TOTAL: R${" "}
           {calculateTotal().toLocaleString("pt-BR", {
