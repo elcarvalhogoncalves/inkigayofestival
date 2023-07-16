@@ -1,7 +1,9 @@
 .container {
   height: 100%;
   width: 100%;
+  margin-bottom: 5rem;
   background: black;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +24,7 @@
   font-size: 6.4rem ;
   margin-left: 5rem;
   margin-top: 6.9rem ;
+  margin-bottom: 7rem ;
   letter-spacing: .4rem ;
 }
   
@@ -32,36 +35,43 @@
 
 .body {
   max-width: 128rem;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .dias {
   margin-bottom: 2.7rem;
-
   display: flex;
   justify-content: space-between;
 }
 
 .date {
   box-sizing: border-box;
-  height: 10.5rem;
-  width: 24.7rem;
+  cursor: pointer;
+  width: 21.7rem;
   border: none;
-
+  padding: 1.3rem;
   background-color: transparent;
   color: white;
   filter: brightness(50%);
+  transition: .2s;
 }
 
-.date:active {
+
+.date:hover {
+  filter: brightness(100%);
+
+}
+
+.date_choice{
+  border: 3px solid white;
+  text-decoration: underline;
   filter: brightness(100%);
 }
 
 .date h1 {
   font-size: 3.2rem;
-  border-bottom: 2px solid #fff;
 }
 
 .date p {
@@ -73,11 +83,16 @@
 }
 
 .cards div {
-
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
   width: 1180px;
   height: 161px;
   text-align: center;
-  
+  transition: .5s ease-in;
   background-size: cover;
   filter: brightness(80%);
 }
@@ -90,21 +105,34 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  transition: .5s ease-out;
   
 }
 .cards div h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-shadow: #000 .2rem .3rem 0.5rem;
   font-size: 64px;
   align-self: center;
   filter: brightness(100%);
 }
 .cards div p {
-  opacity: 0;
-  font-size: 36px;
-  background: #8E05C2;
+  display: none;
+  width: 100%;
+  font-size: 24px;
+  background: #270036bb;
+  transition: .3s ease-in;
 }
 .cards div:hover p {
-  opacity: 100;
+  display: flex;
+  align-items: center;
+  text-shadow: #000 .2rem .3rem 0.5rem;
+  padding-block: 2rem;
+  justify-content: center;
   font-weight: 300;
+  transition: .3s ease-out;
 }
 
 .aespa {
@@ -169,16 +197,15 @@
       max-width: 43rem ;
     }
     .date{
-      height: 4rem;
       width: 10.7rem;
     }
 
     .date h1{
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
 
     .date p{
-      font-size: 1.6rem ;
+      font-size: 1.2rem ;
     }
     
     .cards div{

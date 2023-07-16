@@ -9,10 +9,12 @@ import LineUp from "@/components/landing-page/LineUp";
 export default function LandingPage() {
   return (
     <>
-      <Festival/>
+      {/* <Navbar/> */}
+      {/* <Home/> */}
+      {/* <Festival/> */}
       <LineUp/>
-      <FAQ />
-      <Footer/>
+      {/* <FAQ /> */}
+      {/* <Footer/> */}
     </>
   );
 }

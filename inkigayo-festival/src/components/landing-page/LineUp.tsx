@@ -17,15 +17,15 @@ export default function LineUp() {
             <h1> LINE-UP</h1>
           </div>
           <div className={styles.dias}>
-            <button className={styles.date} onClick={() => setDia("sexta")}>
+            <button className={`${styles.date} ${Dia === "sexta" && styles.date_choice}`} onClick={() => setDia("sexta")}>
               <h1>SEXTA</h1>
               <p>08 DE SETEMBRO</p>
             </button>
-            <button className={styles.date} onClick={() => setDia("sabado")}>
+            <button className={`${styles.date} ${Dia === "sabado" && styles.date_choice}`} onClick={() => setDia("sabado")}>
               <h1>SÁBADO</h1>
               <p>09 DE SETEMBRO</p>
             </button>
-            <button className={styles.date} onClick={() => setDia("domingo")}>
+            <button className={`${styles.date} ${Dia === "domingo" && styles.date_choice}`} onClick={() => setDia("domingo")}>
               <h1>DOMINGO</h1>
               <p>10 DE SETEMBRO</p>
             </button>

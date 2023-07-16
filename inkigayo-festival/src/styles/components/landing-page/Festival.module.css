@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 7.5rem;
+  margin-left: 0rem;
   height: 80rem;
 }
 
@@ -81,15 +81,26 @@
 }
 
 .image {
-  width: 100rem;
-  height: 80rem;
+  width: 63rem;
+  max-height: 100%;
   background-image: url("../../../../public/imagens/festival.svg");
-  background-size: 30% ;
+  background-size: cover ;
   background-repeat: no-repeat;
   background-position: 70% 20%;
 }
 
-@media screen and (max-width: 600px) {
+.image_shadow{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    padding: 6rem 6.7rem;
+    background: linear-gradient(to left, transparent 90%, #000 99% , #000 100%),linear-gradient(to bottom, transparent 90%, #000 99% , #000 100%);
+}
+
+
+@media screen and (max-width: 770px) {
  
   .title{
     background-position: center;
@@ -118,6 +129,7 @@
   .desc{
     text-align: center;
     font-size: 2rem;
+    text-shadow: #000 .2rem .3rem 0.3rem;
     width: 35rem;
     height: 31.5rem;
     margin-top: 3.5rem;
@@ -133,13 +145,16 @@
   }
   .frase{
     text-align: center;
+    text-shadow: #000 .2rem .3rem 0.3rem;
     font-size: 2.5rem;
     width: 43rem;
     line-height: 3.1rem;
   } 
   .autor{
     font-size: 2.6rem;
+    text-shadow: #000 .2rem .3rem 0.3rem;
     margin-top: 3.2rem;
+    margin-right: 2rem;
   }
   .image{
     width: 0;

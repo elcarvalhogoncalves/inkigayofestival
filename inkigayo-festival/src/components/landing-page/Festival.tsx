@@ -31,8 +31,9 @@ export default function Festival() {
               <p className={styles.autor}>CORREIO DA BAHIA</p>
             </div>
           </div>
-
-          <figure className={styles.image} />
+          <div className={styles.image}>
+            <div className={styles.image_shadow}></div>
+          </div>
         </div>
       </section>
     </>
