@@ -39,7 +39,7 @@ export default function FAQ() {
   }
   return (
     <>
-      <section className={styles.conteiner} id="#faq">
+      <section className={styles.conteiner} id="faq">
         <div className={styles.body}>
           <div className={styles.title}>
             <h1>F.A.Q</h1>
@@ -53,7 +53,7 @@ export default function FAQ() {
                   <span className={styles.colortext}>Festival Inkigayo?</span>
                 </h2>
                 <button onClick={() => toggleQ("Q1")}>
-                  <Image src={S1} />
+                  <Image src={S1} alt="o que é isso?" />
                 </button>
               </div>
               {Q1 === true && (
@@ -75,7 +75,7 @@ export default function FAQ() {
                   <span className={styles.colortext}>Festival Inkigayo?</span>
                 </h2>
                 <button onClick={() => toggleQ("Q2")}>
-                  <Image src={S2} />{" "}
+                  <Image src={S2} alt="o que é isso?" />{" "}
                 </button>
               </div>
               {Q2 === true && (
@@ -97,7 +97,7 @@ export default function FAQ() {
                   <span className={styles.colortext}>Festival Inkigayo?</span>
                 </h2>
                 <button onClick={() => toggleQ("Q3")}>
-                  <Image src={S3} />
+                  <Image src={S3} alt="o que é isso?" />
                 </button>{" "}
               </div>
               {Q3 === true && (

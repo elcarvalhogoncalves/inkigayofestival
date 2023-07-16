@@ -1,11 +1,10 @@
 import styles from "@/styles/components/landing-page/Festival.module.css";
-import foto from "../../../public/imagens/festival.png";
 import Image from "next/image";
 
 export default function Festival() {
   return (
     <>
-      <section className={styles.container} id="#o_festival">
+      <section className={styles.container} id="o_festival">
         <div className={styles.body}>
           <div className={styles.texto}>
             <div className={styles.title}>
@@ -24,19 +23,16 @@ export default function Festival() {
               artistas talentosos e amantes da cultura coreana em uma
               experiência inesquecível.
             </p>
-
             <div className={styles.quote}>
               <p className={styles.frase}>
-                “Lorem ipsum dolor sit amet consectetur. Diam semper est diam
-                nunc egestas dui tincidunt sit.”
+                “Maior festival de música coreana na américa latina. Reune os
+                maiores artistas coreanos da atualidade.”
               </p>
-              <p className={styles.autor}> FULANO, CICLANO</p>
+              <p className={styles.autor}>CORREIO DA BAHIA</p>
             </div>
           </div>
 
-          <figure className={styles.image}>
-            <Image src={foto} width={630} height={832} alt={""} />
-          </figure>
+          <figure className={styles.image} />
         </div>
       </section>
     </>
