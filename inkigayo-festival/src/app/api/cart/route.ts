@@ -19,7 +19,7 @@ export async function POST(request: Request, response: Response) {
 
     for(let i = 0; i < data.cart.length; i++) {
         for(let j = 0; j < data.cart[i].quantidade; j++) {
-            const ticket = await fetch("../ticket", {
+            const ticket = await fetch("http://localhost:3000/api/ticket", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
