@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ['qrickit.com', 'localhost', 'vercel.app']
+        domains: ['qrickit.com', 'localhost', 'vercel.app', 'inkigayofestival.vercel.app',]
     }
 }
 
