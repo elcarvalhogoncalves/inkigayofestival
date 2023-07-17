@@ -9,23 +9,23 @@ export default function Galeria() {
   const [pictures, setPictures] = useState([
     {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-      url: "http://localhost:3000/imagens/gallery/picture02.jpeg",
+      url: "./imagens/gallery/picture02.jpeg",
     },
     {
       description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-      url: "http://localhost:3000/imagens/gallery/picture01.jpg",
+      url: "./imagens/gallery/picture01.jpg",
     },
     {
       description: "Lorem ipsum dolor, sit amet adipisicing elit.",
-      url: "http://localhost:3000/imagens/gallery/picture03.jpg",
+      url: "./imagens/gallery/picture03.jpg",
     },
     {
       description: "Lorem ipsum sit, dolor amet adipisicing elit.",
-      url: "http://localhost:3000/imagens/gallery/picture05.jpg",
+      url: "./imagens/gallery/picture05.jpg",
     },
     {
       description: "Lorem ipsum sit, dolor adipisicing .",
-      url: "http://localhost:3000/imagens/gallery/picture04.jpg",
+      url: "./imagens/gallery/picture04.jpg",
     },
   ]);
   const [carrouselIndex, setCarouselIndex] = useState(0);

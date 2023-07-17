@@ -37,7 +37,7 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${showMenu ? styles.navbar_open :""} ${scrolled ? styles.scrolled : ""}`}>
       <header className={styles.header}>
         
-        <Link href={"http://localhost:3000/"}>
+        <Link href={"https://inkigayofestival.vercel.app/"}>
           <figure className={`${styles.logo} ${showMenu ? styles.logo_open :""}`} />
         </Link>
 
@@ -56,24 +56,24 @@ export default function Navbar() {
       <ul className={`${styles.menu} ${showMenu ? styles.menu_open :""}`}>
         <Link
           className={styles.link}
-          href={"http://localhost:3000/#o_festival"}
+          href={"https://inkigayofestival.vercel.app/#o_festival"}
         >
           <li className={styles.list_item}>O festival</li>
         </Link>
-        <Link className={styles.link} href={"http://localhost:3000/#line_up"}>
+        <Link className={styles.link} href={"https://inkigayofestival.vercel.app/#line_up"}>
           <li className={styles.list_item}>Line-Up</li>
         </Link>
-        <Link className={styles.link} href={"http://localhost:3000/#faq"}>
+        <Link className={styles.link} href={"https://inkigayofestival.vercel.app/#faq"}>
           <li className={styles.list_item}>F.A.Q.</li>
         </Link>
-        <Link className={styles.link} href={"http://localhost:3000/#galeria"}>
+        <Link className={styles.link} href={"https://inkigayofestival.vercel.app/#galeria"}>
           <li className={styles.list_item}>Galeria</li>
         </Link>
-        <Link className={styles.link} href={"http://localhost:3000/ingresso"}>
+        <Link className={styles.link} href={"https://inkigayofestival.vercel.app/ingresso"}>
           <li className={styles.list_item}>Ingresso</li>
         </Link>
         {session && (
-            <Link className={styles.link} href={"http://localhost:3000/meus-ingressos"}>
+            <Link className={styles.link} href={"https://inkigayofestival.vercel.app/meus-ingressos"}>
               <li className={styles.list_item}>Meus Ingressos</li>
             </Link>
         )}
@@ -85,8 +85,8 @@ export default function Navbar() {
           className={styles.link}
           href={
             pathname === "/ingresso"
-              ? `http://localhost:3000/login?callback=ingresso`
-              : `http://localhost:3000/login`
+              ? `https://inkigayofestival.vercel.app/login?callback=ingresso`
+              : `https://inkigayofestival.vercel.app/login`
           }
         >
           <button className={`${styles.login_button} ${showMenu ? styles.login_button_open :""}`}>Login</button>

@@ -46,7 +46,7 @@ export default function Cadastro() {
 			return;
 		}
 		setLoading(true);
-		const userData = await fetch("http://localhost:3000/api/register", {
+		const userData = await fetch("../api/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
