@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { signIn, useSession } from "next-auth/react"
 import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation'
 import Loading from "@/app/loading";
 
@@ -14,6 +15,8 @@ type loginUser = {
   password: string
 }
 export default function Login() {
+  const { push } = useRouter();
+
   const searchParams = useSearchParams()
   const callback = searchParams.get('callback')
   const register = searchParams.get('registerSuccess')
@@ -23,26 +26,27 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  if(session.status === "authenticated"){
-    if(callback){
-      redirect('../ingressos')
-    } else {
-      redirect('../')
-    }
-  }
+  // if(session.status === "authenticated"){
+  //   if(callback){
+  //     redirect('../ingressos')
+  //   } else {
+  //     redirect('../')
+  //   }
+  // }
 
   async function handleLogin(){
-    const status = await signIn('credentials', {
-      redirect: false,
-      email: email,
-      password: password,
-      callbackUrl: "/"
-    })
-    if(status.error){
-      setError(status.error);
-    } else {
-      setError("");
-    }
+    push('../');
+    // const status = await signIn('credentials', {
+    //   redirect: false,
+    //   email: email,
+    //   password: password,
+    //   callbackUrl: "/"
+    // })
+    // if(status.error){
+    //   setError(status.error);
+    // } else {
+    //   setError("");
+    // }
   }
 
   // async function handleGoogleLogin(){
@@ -53,9 +57,9 @@ export default function Login() {
   //   signIn('facebook', {callbackUrl: '../'})
   // }
 
-  if(session.status === "loading"){
-    return <Loading />
-  }
+  // if(session.status === "loading"){
+  //   return <Loading />
+  // }
 
       return (
       <>
@@ -72,11 +76,11 @@ export default function Login() {
               handleLogin();
             }}
             >
-            {error &&
+            {/* {error &&
               <span className={styles.error}>
                 {error}
               </span>
-            }
+            } */}
             {register &&
               <span className={styles.sucess}>
                 <p>Usuário cadastrado com sucesso.</p>

@@ -4,11 +4,14 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import styles from "@/styles/components/login/Cadastro.module.css";
 import Link from "next/link";
 import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 import { SyntheticEvent, useEffect, useState } from "react";
 import { signIn, useSession } from "next-auth/react"
 import Loading from "@/app/loading";
 
 export default function Cadastro() {
+	const { push } = useRouter();
+
 	const session = useSession();
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -44,47 +47,56 @@ export default function Cadastro() {
 
 		if(nameError || emailError || passwordError || cPasswordError) {
 			return;
-		}
-		setLoading(true);
-		const userData = await fetch("../api/register", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                password: password,
-            }),
-        });
+		} 
 
-        if(!userData.ok) {
-            const error = await userData.json();
-            setRegisterError(error.message);
-			setLoading(false);
-			return;
-        } else {
-			const data = await userData.json();
-			setRegisterError("");
-			handleLogin(data.user.email, password);
+		if(!nameError && !emailError && !passwordError && !cPasswordError) {
+			push('../');
 		}
+		// setLoading(true);
+		// const userData = await fetch("../api/register", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({
+        //         name: name,
+        //         email: email,
+        //         password: password,
+        //     }),
+        // });
+
+        // if(!userData.ok) {
+        //     const error = await userData.json();
+        //     setRegisterError(error.message);
+		// 	setLoading(false);
+		// 	return;
+        // } else {
+		// 	const data = await userData.json();
+		// 	setRegisterError("");
+		// 	handleLogin(data.user.email, password);
+		// }
+
+		// handleLogin();
+		
 	}
-	async function handleLogin( loginEmail: string, loginPassword: string ){
-		const status = await signIn('credentials', {
-		  redirect: false,
-		  email: loginEmail,
-		  password: loginPassword,
-		  callbackUrl: "/"
-		})
-		if(status.error){
-			setRegisterError(status.error);
-			setLoading(false);
-		}		
+	async function handleLogin(){
+		// const status = await signIn('credentials', {
+		//   redirect: false,
+		//   email: loginEmail,
+		//   password: loginPassword,
+		//   callbackUrl: "/"
+		// })
+		// if(status.error){
+		// 	setRegisterError(status.error);
+		// 	setLoading(false);
+		// }		
+
+
 	}
 
-	if(session.status === "authenticated"){
-		  redirect('../')
-	  }
+	// if(session.status === "authenticated"){
+	// 	  redirect('../')
+	//   }
 
 	useEffect(() => {
 		if(password !== confirmPassword) {
@@ -95,9 +107,9 @@ export default function Cadastro() {
 		
 	}, [confirmPassword]);
 
-	if(loading) {
-		return <Loading />
-	}
+	// if(loading) {
+	// 	return <Loading />
+	// }
   	return (
     <>
       	<main className={styles.registro_main}>

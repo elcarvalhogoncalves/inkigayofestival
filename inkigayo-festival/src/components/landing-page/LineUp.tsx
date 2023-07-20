@@ -8,7 +8,7 @@ export default function LineUp() {
   const [Dia, setDia] = useState("sexta"); //cada número um card
 
   const showbts = false;
-  console.log(Dia);
+  // console.log(Dia);
   return (
     <>
       <section className={styles.container} id="line_up">

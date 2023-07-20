@@ -63,86 +63,86 @@ export default function IngressoCompras({
 
   const [selectedDay, setSelectedDay] = useState<string>("sexta");
 
-  const [resultAPI, setResultAPI] = useState<IAPI[]>([]);
+  // const [resultAPI, setResultAPI] = useState<IAPI[]>([]);
   const [isLoading, setLoading] = useState(false)
  
-  useEffect(() => {
-    setLoading(true)
-    fetch('./api/event')
-      .then((res) => res.json())
-      .then((data) => {
-        setResultAPI(data)
-        setLoading(false)
-      })
-  }, [])
+  // useEffect(() => {
+  //   setLoading(true)
+  //   fetch('./api/event')
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setResultAPI(data)
+  //       setLoading(false)
+  //     })
+  // }, [])
 
 
 
-  // const resultAPI = [
-  //   {
-  //     id: 1,
-  //     dia: "sexta",
-  //     tickets: [
-  //       {
-  //         nome: "Arena Pista (Inteira)",
-  //         preco: 459,
-  //         quantidade: 7500,
-  //       },
-  //       {
-  //         nome: "Arena Pista (Meia-Entrada)",
-  //         preco: 229,
-  //         quantidade: 2500,
-  //       },
-  //       {
-  //         nome: "Camarote VIP",
-  //         preco: 669,
-  //         quantidade: 5000,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 2,
-  //     dia: "sabado",
-  //     tickets: [
-  //       {
-  //         nome: "Arena Pista (Inteira)",
-  //         preco: 259,
-  //         quantidade: 7500,
-  //       },
-  //       {
-  //         nome: "Arena Pista (Meia-Entrada)",
-  //         preco: 329,
-  //         quantidade: 2500,
-  //       },
-  //       {
-  //         nome: "Camarote VIP",
-  //         preco: 769,
-  //         quantidade: 5000,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 3,
-  //     dia: "sexta",
-  //     tickets: [
-  //       {
-  //         nome: "Arena Pista (Inteira)",
-  //         preco: 659,
-  //         quantidade: 7500,
-  //       },
-  //       {
-  //         nome: "Arena Pista (Meia-Entrada)",
-  //         preco: 429,
-  //         quantidade: 2500,
-  //       },
-  //       {
-  //         nome: "Camarote VIP",
-  //         preco: 869,
-  //         quantidade: 5000,
-  //       },
-  //     ],
-  //   },
-  // ];
+  const resultAPI = [
+    {
+      id: 1,
+      dia: "sexta",
+      tickets: [
+        {
+          nome: "Arena Pista (Inteira)",
+          preco: 459,
+          quantidade: 7500,
+        },
+        {
+          nome: "Arena Pista (Meia-Entrada)",
+          preco: 229,
+          quantidade: 2500,
+        },
+        {
+          nome: "Camarote VIP",
+          preco: 669,
+          quantidade: 5000,
+        },
+      ],
+    },
+    {
+      id: 2,
+      dia: "sabado",
+      tickets: [
+        {
+          nome: "Arena Pista (Inteira)",
+          preco: 259,
+          quantidade: 7500,
+        },
+        {
+          nome: "Arena Pista (Meia-Entrada)",
+          preco: 329,
+          quantidade: 2500,
+        },
+        {
+          nome: "Camarote VIP",
+          preco: 769,
+          quantidade: 5000,
+        },
+      ],
+    },
+    {
+      id: 3,
+      dia: "sexta",
+      tickets: [
+        {
+          nome: "Arena Pista (Inteira)",
+          preco: 659,
+          quantidade: 7500,
+        },
+        {
+          nome: "Arena Pista (Meia-Entrada)",
+          preco: 429,
+          quantidade: 2500,
+        },
+        {
+          nome: "Camarote VIP",
+          preco: 869,
+          quantidade: 5000,
+        },
+      ],
+    },
+  ];
 
   const prices: IDays = {
     sexta: [

@@ -1,6 +1,6 @@
 "use client"
 import styles from "@/styles/components/profile/Profile.module.css"
-import { useSession } from "next-auth/react"
+// import { useSession } from "next-auth/react"
 import { redirect } from 'next/navigation'
 import Image from "next/image"
 import { useEffect, useState } from "react"
@@ -12,32 +12,76 @@ type Iuser = {
 }
 
 export default function Profile() {
-    const { data: session, status } = useSession({
-        required: true,
-        onUnauthenticated() {
-            redirect('../');
-        },
-    })
-    const [loading, setLoading] = useState(false);
-    const [tickets, setTickets] = useState([]);
+    // const { data: session, status } = useSession({
+    //     required: true,
+    //     onUnauthenticated() {
+    //         redirect('../');
+    //     },
+    // })
+    // const [loading, setLoading] = useState(false);
+    // const [tickets, setTickets] = useState([]);
     const [user, setUser] = useState<Iuser>({
-        name: "",
-        email: "",
+        name: "John Doe",
+        email: "john@doe.com",
     });
 
 
-    useEffect(() => {
-        setLoading(true)
-        fetch('/api/ticket?id=' + session.user.email)
-          .then(res => res.json())
-          .then(data => {
-            setTickets(data.tickets)
-            setUser(data.user)
-            setLoading(false)
-        })
+    // useEffect(() => {
+    //     setLoading(true)
+    //     fetch('/api/ticket?id=' + session.user.email)
+    //       .then(res => res.json())
+    //       .then(data => {
+    //         setTickets(data.tickets)
+    //         setUser(data.user)
+    //         setLoading(false)
+    //     })
 
-      }, [])
-
+    //   }, [])
+    
+    const resultAPI = [
+		{
+			"id": "9e5d589a-67d7-4847-b1b5-ade6474889e0",
+			"dia": "sexta",
+			"nome": "Camarote Vip",
+			"preco": 699,
+			"userId": 1
+		},
+		{
+			"id": "51029edf-2b41-44da-8370-1d37e88f9841",
+			"dia": "sexta",
+			"nome": "Arena Pista Inteira",
+			"preco": 459,
+			"userId": 1
+		},
+		{
+			"id": "57da4dd5-43bd-4232-9999-f2f4e7c0ccce",
+            "dia": "sexta",
+            "nome": "Arena Pista Inteira",
+            "preco": 459,
+            "userId": 1
+        },
+		{
+			"id": "3c1a0d4f-7991-4f3d-a998-9a782f9407af",
+			"dia": "sabado",
+			"nome": "Arena Pista Meia-Entrada",
+			"preco": 279,
+			"userId": 1
+		},
+		{
+			"id": "378493c8-8cc8-4667-8bb4-fbdfe9480df4",
+			"dia": "sabado",
+			"nome": "Camarote Vip",
+			"preco": 799,
+			"userId": 1
+		},
+		{
+			"id": "efe7b4e4-de43-4ecf-b8a2-c6404c004e9b",
+			"dia": "domingo",
+			"nome": "Arena Pista Inteira",
+			"preco": 699,
+			"userId": 1
+		}
+	];
 
     function funcaoDia(dia : string){
         switch(dia){
@@ -48,21 +92,21 @@ export default function Profile() {
         }
     }
 
-    if(status === "loading"){
-        return <Loading />
-    }
+    // if(status === "loading"){
+    //     return <Loading />
+    // }
 
     return (
         <main className={styles.profile_main}>
             <section className={styles.profile_section}>
                 <div className={styles.profile_div}>
-                    <p className={styles.profile_name}>Olá, {session.user.name}</p>
+                    <p className={styles.profile_name}>Olá, {user.name}</p>
                     <p className={styles.profile_name_details}>~ Meus ingressos</p>
                 </div>
                 <hr className={styles.line} />
 
                 <section className={styles.profile_tickets}>
-                {loading ? <Loading /> : tickets.length > 0 ? tickets.map((ticket) => (
+                {resultAPI.length > 0 ? resultAPI.map((ticket) => (
                         <article key={ticket.id} className={styles.ticket}>
                             <Image src={`http://qrickit.com/api/qr.php?d=${ticket.id}&addtext=Inkigayo+Festival&txtcolor=8E05C2&fgdcolor=8E05C2&bgdcolor=000000&qrsize=240&t=p&e=m`} width={200} height={200} alt="Qr code" />
                             <div className={styles.ticket_info}>

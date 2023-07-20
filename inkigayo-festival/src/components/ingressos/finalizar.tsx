@@ -39,24 +39,25 @@ export default function IngressoFinalizar({
 
   const [isLoading, setLoading] = useState(false);
   async function handleA() {
-      setLoading(true);
-      const data = await fetch("./api/cart", {
-              method: "POST",
-              headers: {
-                  "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                  userEmail: infoCart.userEmail,
-                  cart: infoCart.cart,
-              }),
-          });
-      if(data.ok) {
-        setLoading(false);
-        handleAvancar();
-      } else {
-        setLoading(false);
-        console.log(data);
-      }
+      // setLoading(true);
+      // const data = await fetch("./api/cart", {
+      //         method: "POST",
+      //         headers: {
+      //             "Content-Type": "application/json",
+      //         },
+      //         body: JSON.stringify({
+      //             userEmail: infoCart.userEmail,
+      //             cart: infoCart.cart,
+      //         }),
+      //     });
+      // if(data.ok) {
+      //   setLoading(false);
+      //   handleAvancar();
+      // } else {
+      //   setLoading(false);
+      //   console.log(data);
+      // }
+      handleAvancar();
   }
 
   // console.log(infoCart);

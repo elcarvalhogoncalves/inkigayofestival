@@ -8,7 +8,7 @@ import IngressoPagamento from "@/components/ingressos/pagamento";
 import IngressoFinalizar from "@/components/ingressos/finalizar";
 import Sucesso from "@/components/ingressos/success";
 
-import { signIn, signOut, useSession } from "next-auth/react"
+// import { signIn, signOut, useSession } from "next-auth/react"
 import { redirect } from 'next/navigation'
 import Loading from "@/app/loading";
 
@@ -30,7 +30,7 @@ interface Cart {
 }
 
 export default function Ingresso() {
-  const { data: session, status } = useSession()
+  // const { data: session, status } = useSession()
 
   const [carrinho, setCarrinho] = useState<Cart>({
     name: "string",
@@ -55,9 +55,9 @@ export default function Ingresso() {
 
   const handlePagamento = (pgt: string) => {
     const aux = carrinho;
-    aux["name"] = session.user.name;
+    aux["name"] = "John Doe";
     aux["metodoPagamento"] = pgt;
-    aux["userEmail"] = session.user.email;
+    aux["userEmail"] = "john@doe.com";
     setCarrinho(aux);
   };
 
@@ -69,13 +69,13 @@ export default function Ingresso() {
     setEtapaAtual(etapaAtual - 1);
   };
 
-  if (status === "loading") {
-    return <Loading/>
-  }
+  // if (status === "loading") {
+  //   return <Loading/>
+  // }
 
-  if(status === "unauthenticated"){
-    redirect('../login')
-  }
+  // if(status === "unauthenticated"){
+  //   redirect('../login')
+  // }
 
   return (
     <>
